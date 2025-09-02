@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CleverApp.master.cs"
+    Inherits="CleverUI.CleverApp" %>
+
+<%@ Register TagPrefix="uc" TagName="FilterManager" Src="~/User/FilterManager.ascx" %>
+<%@ Register TagPrefix="uc" TagName="FilterManagerTreeList" Src="~/User/FilterManagerTreeList.ascx" %>
+<%@ Register Src="~/Footer.ascx" TagPrefix="uc" TagName="Footer" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" >--%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>   
+</head>
+<body>
+    <form id="form1" runat="server" >
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server" >
+        <Scripts>
+            <asp:ScriptReference Path="~/js/library.js" />
+        </Scripts>
+    </telerik:RadScriptManager>
+    <div class="body">
+        <div class="header">
+            <div class="left">
+                <div class="logo">
+                    <asp:HyperLink runat="server" NavigateUrl="~/User/Default.aspx" ImageUrl="~/images/clever-logo.gif"
+                        alt="tclogic-logo-small" />
+                </div>
+                <%-- Portal Menu  --%>
+                <telerik:RadMenu ID="RadMenuPortal" runat="server" Skin="Default" CssClass="portal_menu"
+                    Visible="true" Style="z-index: 1000" />
+                <%-- /Portal Menu  --%>
+                <%-- Old Portal Menu
+                <!-- Portal Menu -->
+                <telerik:RadTabStrip ID="rdsPortalTabs" runat="server" CssClass="portal_menu" Skin="Telerik" Visible="true">
+                    <Tabs>
+                        <telerik:RadTab runat="server" Text="Business" NavigateUrl="~/User/Bus/portBus.aspx" />
+                        <telerik:RadTab runat="server" Text="Inventory" NavigateUrl="~/User/Inv/portInv.aspx" />
+                        <telerik:RadTab runat="server" Text="Demand" NavigateUrl="~/User/Dmd/portDmd.aspx" />
+                        <telerik:RadTab runat="server" Text="Supply" NavigateUrl="~/User/Sup/portSup.aspx" />
+                        <telerik:RadTab runat="server" Text="Planning" NavigateUrl="~/User/Plan/portPlan.aspx" />
+                        <telerik:RadTab runat="server" Text="Strategy" NavigateUrl="~/User/Strat/portStrat.aspx" />
+                        <telerik:RadTab runat="server" Text="Item Lookup" NavigateUrl="~/User/Item/PortItem.aspx" />
+                    </Tabs>
+                </telerik:RadTabStrip>
+                
+                <!-- End Portal Menu -->
+                --%>
+                <div class="curr_date">
+                    &nbsp;&nbsp;&nbsp;<asp:Label ID="lblCurrentDate" runat="server"></asp:Label>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="header_right">
+                <%--<div class="menu menu-left">
+                    <a href="javascript:exportPDF();" id="anchExport">Export</a>
+                </div>--%>
+                <div class="filter">
+                    <telerik:RadComboBox ID="rcbFilter" runat="server" AutoPostBack="True" OnSelectedIndexChanged="rcbFilter_SelectedIndexChanged"
+                        CssClass="cb_filter" Skin="Telerik" DropDownWidth="250">
+                        <Items>
+                            <telerik:RadComboBoxItem Text="Filters" Value="0" />
+                        </Items>
+                        <FooterTemplate>
+                            <div class="left">
+                                <asp:LinkButton ID="lbFilter" runat="server" Text="Filter" OnClick="lbFilter_Click" />&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <div class="left">
+                                <asp:LinkButton ID="lbFilterTreeList" runat="server" Text="Filter Tree List" OnClick="lbFilterTreeList_Click" />&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <div class="clear">
+                            </div>
+                        </FooterTemplate>
+                    </telerik:RadComboBox>
+                    <uc:FilterManager ID="ucFilterManager" runat="server" FilterType="UserSystem" Visible="false" />
+                    <uc:FilterManagerTreeList ID="ucSelectFilterManagerTreeList" runat="server" FilterType="UserSystem"
+                        Visible="false" />
+                </div>
+                <div class="menu" runat="server" id="divSecMenu">
+                    <asp:HyperLink ID="hlHelp" runat="server" Text="Help" NavigateUrl="~/Help/Default.aspx"
+                        Target="_blank" />
+                    <asp:PlaceHolder ID="menuEvents" runat="server" Visible="false"><span>|</span>
+                        <asp:HyperLink ID="hlEvents" runat="server" Text="Events" NavigateUrl="~/Events/Default.aspx" />
+                    </asp:PlaceHolder>
+                    <asp:PlaceHolder ID="menuSetup" runat="server" Visible="false"><span>|</span>
+                        <asp:HyperLink ID="hlSetup" runat="server" Text="Setup" NavigateUrl="~/Setup/Default.aspx" />
+                    </asp:PlaceHolder>
+                    <asp:PlaceHolder ID="menuProcess" runat="server" Visible="false"><span>|</span>
+                        <asp:HyperLink ID="hlProcess" runat="server" Text="Processes" NavigateUrl="~/Process/Process.aspx" />
+                    </asp:PlaceHolder>
+                    <asp:PlaceHolder ID="menuAdmin" runat="server" Visible="false"><span>|</span>
+                        <asp:HyperLink ID="hlAdmin" runat="server" Text="Admin" NavigateUrl="~/Admin/Default.aspx" />
+                    </asp:PlaceHolder>
+                </div>
+                <div class="login_status">
+                    <asp:LinkButton ID="lbLoginName" runat="server" OnClick="lbLoginName_Click"></asp:LinkButton>
+                    &nbsp;|&nbsp;
+                    <asp:LoginStatus ID="cntrlLoginStatus" runat="server" LogoutAction="RedirectToLoginPage"
+                        OnLoggingOut="cntrlLoginStatus_LoggingOut" />
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id="content">
+            <asp:Label ID="lblError" runat="server" ForeColor="Red" />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderApp" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <uc:Footer runat="server" />
+        <uc:FilterManagerTreeList ID="ucLoggedinUserFMTL" runat="server"  Visible="false" />
+    </div>
+    <%--    <telerik:RadClientExportManager runat="server" ID="RadClientExportManager1" OnClientPdfExported="PdfExported">
+         </telerik:RadClientExportManager>
+
+         <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" BackgroundPosition="None">
+         <div class="exporting">Exporting...</div>
+         </telerik:RadAjaxLoadingPanel>
+
+             <script type="text/javascript">
+                 var $ = $telerik.$;
+
+                 function exportPDF() {
+                     $find("<%= RadAjaxLoadingPanel1.ClientID%>").show('<%= form1.ClientID %>');
+
+                     $find('<%=RadClientExportManager1.ClientID%>').exportPDF($("#content"));
+                 }
+
+                 function PdfExported() {
+                    $find("<%= RadAjaxLoadingPanel1.ClientID%>").hide('<%= form1.ClientID %>');
+                 }
+            </script>--%>
+    </form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GlobalAdmin.master.cs" Inherits="CleverUI.GlobalAdmin" %>
+<%@ Register Src="~/Footer.ascx" TagPrefix="uc" TagName="Footer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" >
+         <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/js/library.js" />
+        </Scripts>
+    </telerik:RadScriptManager>
+    <div class="body">
+        <div class="header">
+            <div class="left">
+                <div class="logo" style="margin-bottom:5px">
+                    <asp:HyperLink runat="server" NavigateUrl="~/SelectDataSource.aspx" ImageUrl="~/images/clever-logo.gif"
+                        alt="tclogic-logo-small" />
+                </div>
+            </div>
+            <div class="header_right" style="width:200px">
+                <div class="menu" runat="server" id="divSecMenu">
+                    <asp:HyperLink ID="hlHelp" runat="server" Text="Help" NavigateUrl="~/AboutGlobal.aspx" />
+                    <asp:PlaceHolder ID="hldrAdmin" runat="server"><span>|</span>
+                        <asp:HyperLink ID="hlAdmin" runat="server" Text="Admin" NavigateUrl="~/MaintDataSources.aspx" />
+                    </asp:PlaceHolder>
+                </div>
+                <div class="login_status">
+                    <asp:LoginName ID="cntrlLoginName" runat="server" />
+                    &nbsp;|&nbsp;
+                    <asp:LoginStatus ID="cntrlLoginStatus" runat="server" LogoutAction="RedirectToLoginPage"
+                        OnLoggingOut="cntrlLoginStatus_LoggingOut" />
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+                <telerik:RadMenu ID="menuAdmin" runat="server" Skin="Default" Width="100%" style="z-index:999;" >
+        <Items>
+        <telerik:RadMenuItem Text="Data Sources" NavigateUrl="~/MaintDataSources.aspx">
+                <Items>
+                   
+                </Items>
+            </telerik:RadMenuItem>
+              <telerik:RadMenuItem IsSeparator="true" />
+              <telerik:RadMenuItem Text="Users" NavigateUrl="~/MaintUsers.aspx">
+                <Items>
+                   
+                </Items>
+            </telerik:RadMenuItem>
+              <telerik:RadMenuItem IsSeparator="true" />
+        </Items>
+        </telerik:RadMenu>
+        <telerik:RadMenu ID="menuHelp" runat="server" Skin="Default" Width="100%" style="z-index:999">
+        <Items>
+            <telerik:RadMenuItem Text="Contents">
+                <Items>
+                </Items>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem IsSeparator="true" />
+            <telerik:RadMenuItem Text="About TCLogic">
+                <Items>
+                    <telerik:RadMenuItem Text="Home Page" NavigateUrl="http://www.tclogic.com/" Target="_blank" />
+                </Items>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem IsSeparator="true" />
+            <telerik:RadMenuItem Text="About Clever">
+                <Items>
+                    <telerik:RadMenuItem Text="About" NavigateUrl="~/AboutGlobal.aspx" />
+                </Items>
+            </telerik:RadMenuItem>
+        </Items>
+    </telerik:RadMenu>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="cphAdminPage" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+     
+     <uc:Footer runat="server" />
+       
+   </div>
+    </form>
+</body>
+</html>

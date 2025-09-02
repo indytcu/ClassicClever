@@ -1,0 +1,3720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47B87D37-3631-4441-B3A1-0EE58DD588C4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CleverUI</RootNamespace>
+    <AssemblyName>CleverUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.1.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Spreadsheet, Version=2019.2.514.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.2.514.40\AdditionalLibraries\Bin40\Telerik.Web.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2019.2.514.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.2.514.40\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2019.2.514.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.2.514.40\Telerik.Web.UI.Skins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2019.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.2.514.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2019.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.2.514.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2019.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.2.514.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2019.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.2.514.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2019.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.2.514.40\AdditionalLibraries\Bin40\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutGlobal.aspx.cs">
+      <DependentUpon>AboutGlobal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutGlobal.aspx.designer.cs">
+      <DependentUpon>AboutGlobal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.master.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.master.designer.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\etlTransformationSpec.aspx.cs">
+      <DependentUpon>etlTransformationSpec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\etlTransformationSpec.aspx.designer.cs">
+      <DependentUpon>etlTransformationSpec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HelpDocs.aspx.cs">
+      <DependentUpon>HelpDocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HelpDocs.aspx.designer.cs">
+      <DependentUpon>HelpDocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\JoinPaths.aspx.cs">
+      <DependentUpon>JoinPaths.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\JoinPaths.aspx.designer.cs">
+      <DependentUpon>JoinPaths.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MaintDocks.aspx.cs">
+      <DependentUpon>MaintDocks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MaintUserFilters.aspx.cs">
+      <DependentUpon>MaintUserFilters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MaintUserFilters.aspx.designer.cs">
+      <DependentUpon>MaintUserFilters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TermConfig.aspx.cs">
+      <DependentUpon>TermConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TermConfig.aspx.designer.cs">
+      <DependentUpon>TermConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\DockEnums.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\TermGroup.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\TablesJoinPaths.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\TermConfig.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\FilterTermCalc.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Help.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\PortalDock.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\InvPos.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\SurplusLine.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\SurplusTransfer.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\TransferType.cs" />
+    <Compile Include="AppCode\ControlsUtil\ControlTemplate.cs" />
+    <Compile Include="AppCode\IFilterManager.cs" />
+    <Compile Include="AppCode\IFilterTreeManager.cs" />
+    <Compile Include="AppCode\InterfaceLogic\Enums\DisplayModeEnum.cs" />
+    <Compile Include="AppCode\InterfaceLogic\PortalPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\ResponseFilterManagerControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConnectionLost.aspx.cs">
+      <DependentUpon>ConnectionLost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConnectionLost.aspx.designer.cs">
+      <DependentUpon>ConnectionLost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalAdmin.Master.cs">
+      <DependentUpon>GlobalAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlobalAdmin.Master.designer.cs">
+      <DependentUpon>GlobalAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaintDataSources.aspx.cs">
+      <DependentUpon>MaintDataSources.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintDataSources.aspx.designer.cs">
+      <DependentUpon>MaintDataSources.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MaintDocks.aspx.designer.cs">
+      <DependentUpon>MaintDocks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OnlineUsers.aspx.cs">
+      <DependentUpon>OnlineUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OnlineUsers.aspx.designer.cs">
+      <DependentUpon>OnlineUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\adminTCL\CleverDataSourceType.cs" />
+    <Compile Include="AppCode\BusinessLogic\adminTCL\UsersCleverDataSource.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\CompareOpsEnum.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\FcstConfig.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\FcstPattern.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\FcstPatternCriteria.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Grain.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\GrainColumn.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\RecStatus.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Select.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\SelectTableEnum.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Settings.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\TableJoin.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\ItemPackage.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\ItemRel.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\ItemRelDetail.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\People.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\Season.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\SupplyItem.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\SupPurchGroup.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\DemandEvent.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\Demand.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\DemandLine.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\FcstAnalysis.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\FcstAnalysisSeries.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\FcstAnalysisSeriesCalc.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\FcstAnalysisSeriesTime.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\FcstPatternAnalysis.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\FcstPatternAnalysisSeries.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\FcstPatternParam.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\Inventory.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\InvoiceLine.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\LifeCycleAnalysis.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\LifeCycleAnalysisSeries.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\LifeCycleAnalysisSeriesCalc.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\Rank.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\TableTypeEnum.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Target.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\Customer.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\ItemLocRel.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\ItemLocRelDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\Ranking.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\RankingCriteria.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\StatTime.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\StrategyDetail.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\StrategyEvent.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\SupplyLine.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\SupplyOrder.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\SurplusRollup.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\SurplusRollupDetail.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\TransferLine.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\TransferOrder.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\BusUnit.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\DemandEventType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\Criticality.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\LineType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\OrderType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\Organization.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\PlanDetailType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\PurchGroupType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\ReplMethod.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\RollupItem.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\RollupLoc.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\ShipVia.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\StrategyEventStatus.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\StrategyEventType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\StrategyRollupCriteria.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\SupplierType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\SupReplType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\SurplusMethod.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\SurplusType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\TransType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverDmd\CustFcst.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverDmd\FcstLoad.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLogicBL\ERP.cs" />
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\SAP\SupItem.cs" />
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\SAP\SupItemPlan.cs" />
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\P21\SupplyLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\P21\SupplyLineNote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\P21\SupplyOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\P21\SupplyOrderNote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\P21\TransferLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\P21\TransferLineNote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\P21\TransferOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\ERPIntegrationBL\P21\TransferOrderNote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\etlBL\TransformCustClvr.cs" />
+    <Compile Include="AppCode\BusinessLogic\etlBL\TransformCustClvrDetail.cs" />
+    <Compile Include="AppCode\BusinessLogic\LogManager.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\DemandAdj.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\DemandType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\FcstAdj.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\FcstType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\FscstMethod.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\ItemLocRelType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\ItemRelType.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Ref\StockStrat.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLogicBL\CustTable.cs" />
+    <Compile Include="AppCode\InterfaceLogic\Web\Extensions.cs" />
+    <Compile Include="AppCode\InterfaceLogic\Web\NavigateQueryStings.cs" />
+    <Compile Include="AppCode\InterfaceLogic\Web\NavigatePages.cs" />
+    <Compile Include="AppCode\ControlsUtil\RadMenuUtils.cs" />
+    <Compile Include="AppCode\InterfaceLogic\Enums\ChartSizeEnum.cs" />
+    <Compile Include="AppCode\InterfaceLogic\ItemRelDetailControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\ItemRelDetailPopup.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\PrintableChart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\RelationControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPIntegration\ERPIntegration.Master.cs">
+      <DependentUpon>ERPIntegration.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPIntegration\ERPIntegration.Master.designer.cs">
+      <DependentUpon>ERPIntegration.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ERPIntegration\P21\MakeOrder.ascx.cs">
+      <DependentUpon>MakeOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPIntegration\P21\MakeOrder.ascx.designer.cs">
+      <DependentUpon>MakeOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPIntegration\SAP\SupPlans.aspx.cs">
+      <DependentUpon>SupPlans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPIntegration\SAP\SupPlans.aspx.designer.cs">
+      <DependentUpon>SupPlans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPIntegration\P21\UploadPOs.aspx.cs">
+      <DependentUpon>UploadPOs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPIntegration\P21\UploadPOs.aspx.designer.cs">
+      <DependentUpon>UploadPOs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPIntegration\P21\UploadTOs.aspx.cs">
+      <DependentUpon>UploadTOs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPIntegration\P21\UploadTOs.aspx.designer.cs">
+      <DependentUpon>UploadTOs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPIntegration\SHIMS\MakeOrder.ascx.cs">
+      <DependentUpon>MakeOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPIntegration\SHIMS\MakeOrder.ascx.designer.cs">
+      <DependentUpon>MakeOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\DemandEvents.aspx.cs">
+      <DependentUpon>DemandEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events\DemandEvents.aspx.designer.cs">
+      <DependentUpon>DemandEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Events.Master.cs">
+      <DependentUpon>Events.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events\Events.Master.designer.cs">
+      <DependentUpon>Events.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Events\StrategyEvents.aspx.cs">
+      <DependentUpon>StrategyEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events\StrategyEvents.aspx.designer.cs">
+      <DependentUpon>StrategyEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\PdfFile.aspx.cs">
+      <DependentUpon>PdfFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF\PdfFile.aspx.designer.cs">
+      <DependentUpon>PdfFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessRunningInfo.aspx.cs">
+      <DependentUpon>ProcessRunningInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessRunningInfo.aspx.designer.cs">
+      <DependentUpon>ProcessRunningInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\PrintSummary.aspx.cs">
+      <DependentUpon>PrintSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\PrintSummary.aspx.designer.cs">
+      <DependentUpon>PrintSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcFcstFcstPatternParams.ascx.cs">
+      <DependentUpon>CalcFcstFcstPatternParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcFcstFcstPatternParams.ascx.designer.cs">
+      <DependentUpon>CalcFcstFcstPatternParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcFcstMovingAvgParams.ascx.cs">
+      <DependentUpon>CalcFcstMovingAvgParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcFcstMovingAvgParams.ascx.designer.cs">
+      <DependentUpon>CalcFcstMovingAvgParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcFcstMovingWeightedParams.ascx.cs">
+      <DependentUpon>CalcFcstMovingWeightedParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcFcstMovingWeightedParams.ascx.designer.cs">
+      <DependentUpon>CalcFcstMovingWeightedParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcFcstSimpleAvgParams.ascx.cs">
+      <DependentUpon>CalcFcstSimpleAvgParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcFcstSimpleAvgParams.ascx.designer.cs">
+      <DependentUpon>CalcFcstSimpleAvgParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcRankingParams.ascx.cs">
+      <DependentUpon>CalcRankingParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcRankingParams.ascx.designer.cs">
+      <DependentUpon>CalcRankingParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcStockingByTargetParams.ascx.cs">
+      <DependentUpon>CalcStockingByTargetParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\CalcStockingByTargetParams.ascx.designer.cs">
+      <DependentUpon>CalcStockingByTargetParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ConvertSupLeadTimeToBusDays.ascx.cs">
+      <DependentUpon>ConvertSupLeadTimeToBusDays.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ConvertSupLeadTimeToBusDays.ascx.designer.cs">
+      <DependentUpon>ConvertSupLeadTimeToBusDays.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMDeletefactInvPos.ascx.cs">
+      <DependentUpon>DBMDeletefactInvPos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMDeletefactInvPos.ascx.designer.cs">
+      <DependentUpon>DBMDeletefactInvPos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdAdjustMaxDemand.ascx.cs">
+      <DependentUpon>DmdAdjustMaxDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdAdjustMaxDemand.ascx.designer.cs">
+      <DependentUpon>DmdAdjustMaxDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdCalcDemandCost.ascx.cs">
+      <DependentUpon>DmdCalcDemandCost.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdCalcDemandCost.ascx.designer.cs">
+      <DependentUpon>DmdCalcDemandCost.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdSetCustomerInvoiceToNewItem.ascx.cs">
+      <DependentUpon>DmdSetCustomerInvoiceToNewItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdSetCustomerInvoiceToNewItem.ascx.designer.cs">
+      <DependentUpon>DmdSetCustomerInvoiceToNewItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdSetInvoiceToNewLocation.ascx.cs">
+      <DependentUpon>DmdSetInvoiceToNewLocation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdSetInvoiceToNewLocation.ascx.designer.cs">
+      <DependentUpon>DmdSetInvoiceToNewLocation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsDmdGrowth.ascx.cs">
+      <DependentUpon>DmdStatsDmdGrowth.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsDmdGrowth.ascx.designer.cs">
+      <DependentUpon>DmdStatsDmdGrowth.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsResetSeasonal.ascx.cs">
+      <DependentUpon>DmdStatsResetSeasonal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsResetSeasonal.ascx.designer.cs">
+      <DependentUpon>DmdStatsResetSeasonal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ERPUploadForPOCreate_P21.ascx.cs">
+      <DependentUpon>ERPUploadForPOCreate_P21.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ERPUploadForPOCreate_P21.ascx.designer.cs">
+      <DependentUpon>ERPUploadForPOCreate_P21.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ERPUploadForPOSuccess_P21.ascx.cs">
+      <DependentUpon>ERPUploadForPOSuccess_P21.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ERPUploadForPOSuccess_P21.ascx.designer.cs">
+      <DependentUpon>ERPUploadForPOSuccess_P21.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ERPUploadForTOCreate_P21.ascx.cs">
+      <DependentUpon>ERPUploadForTOCreate_P21.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ERPUploadForTOCreate_P21.ascx.designer.cs">
+      <DependentUpon>ERPUploadForTOCreate_P21.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ERPUploadForTOSuccess_P21.ascx.cs">
+      <DependentUpon>ERPUploadForTOSuccess_P21.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ERPUploadForTOSuccess_P21.ascx.designer.cs">
+      <DependentUpon>ERPUploadForTOSuccess_P21.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusInit.ascx.cs">
+      <DependentUpon>InvCalcSurplusInit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusInit.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusInit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ItemsSetItemRel.ascx.cs">
+      <DependentUpon>ItemsSetItemRel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ItemsSetItemRel.ascx.designer.cs">
+      <DependentUpon>ItemsSetItemRel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddAdjERPSecProcess.ascx.cs">
+      <DependentUpon>PlanDetailAddAdjERPSecProcess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddAdjERPSecProcess.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddAdjERPSecProcess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddAdjERPReceipts.ascx.cs">
+      <DependentUpon>PlanDetailAddAdjERPReceipts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddAdjERPReceipts.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddAdjERPReceipts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddAdjERPSO.ascx.cs">
+      <DependentUpon>PlanDetailAddAdjERPSO.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddAdjERPSO.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddAdjERPSO.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddAdjOH.ascx.cs">
+      <DependentUpon>PlanDetailAddAdjOH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddAdjOH.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddAdjOH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPInvAllocQty.ascx.cs">
+      <DependentUpon>PlanDetailAddERPInvAllocQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPInvAllocQty.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddERPInvAllocQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPInvOnOrderQty.ascx.cs">
+      <DependentUpon>PlanDetailAddERPInvOnOrderQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPInvOnOrderQty.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddERPInvOnOrderQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanExpediteStatusNegEndOH.ascx.cs">
+      <DependentUpon>PlanExpediteStatusNegEndOH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanExpediteStatusNegEndOH.ascx.designer.cs">
+      <DependentUpon>PlanExpediteStatusNegEndOH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanExpediteStatusLateCP.ascx.cs">
+      <DependentUpon>PlanExpediteStatusLateCP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanExpediteStatusLateCP.ascx.designer.cs">
+      <DependentUpon>PlanExpediteStatusLateCP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdInitializeDmdType.ascx.cs">
+      <DependentUpon>DmdInitializeDmdType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdInitializeDmdType.ascx.designer.cs">
+      <DependentUpon>DmdInitializeDmdType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdKitToCompItem.ascx.cs">
+      <DependentUpon>DmdKitToCompItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdKitToCompItem.ascx.designer.cs">
+      <DependentUpon>DmdKitToCompItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupLocationDemandToSupplier.ascx.cs">
+      <DependentUpon>DmdRollupLocationDemandToSupplier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupLocationDemandToSupplier.ascx.designer.cs">
+      <DependentUpon>DmdRollupLocationDemandToSupplier.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdSSRollupItem.ascx.cs">
+      <DependentUpon>DmdSSRollupItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdSSRollupItem.ascx.designer.cs">
+      <DependentUpon>DmdSSRollupItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdSSRollupItemLoc.ascx.cs">
+      <DependentUpon>DmdSSRollupItemLoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdSSRollupItemLoc.ascx.designer.cs">
+      <DependentUpon>DmdSSRollupItemLoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstCalcClassifyLTFcstConsumedQty.ascx.cs">
+      <DependentUpon>FcstCalcClassifyLTFcstConsumedQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstCalcClassifyLTFcstConsumedQty.ascx.designer.cs">
+      <DependentUpon>FcstCalcClassifyLTFcstConsumedQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcService.ascx.cs">
+      <DependentUpon>InvCalcService.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcService.ascx.designer.cs">
+      <DependentUpon>InvCalcService.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusAvailQty.ascx.cs">
+      <DependentUpon>InvCalcSurplusAvailQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusAvailQty.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusAvailQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusByAvailLessUsage.ascx.cs">
+      <DependentUpon>InvCalcSurplusByAvailLessUsage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusByAvailLessUsage.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusByAvailLessUsage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusDeNomUsingDmdStatsTotQty.ascx.cs">
+      <DependentUpon>InvCalcSurplusDeNomUsingDmdStatsTotQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusDeNomUsingDmdStatsTotQty.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusDeNomUsingDmdStatsTotQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusNum.ascx.cs">
+      <DependentUpon>InvCalcSurplusNum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusNum.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusNum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusPercent.ascx.cs">
+      <DependentUpon>InvCalcSurplusPercent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusPercent.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusPercent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyDmdStatsTotCOSQty.ascx.cs">
+      <DependentUpon>InvCalcSurplusUsageQtyDmdStatsTotCOSQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyDmdStatsTotCOSQty.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusUsageQtyDmdStatsTotCOSQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMAddMissingInventory.ascx.cs">
+      <DependentUpon>DBMAddMissingInventory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMAddMissingInventory.ascx.designer.cs">
+      <DependentUpon>DBMAddMissingInventory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMArchiveRunHistory.ascx.cs">
+      <DependentUpon>DBMArchiveRunHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMArchiveRunHistory.ascx.designer.cs">
+      <DependentUpon>DBMArchiveRunHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMFactInvPosPropageValues.ascx.cs">
+      <DependentUpon>DBMFactInvPosPropageValues.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMFactInvPosPropageValues.ascx.designer.cs">
+      <DependentUpon>DBMFactInvPosPropageValues.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMFactStrategyPropageValues.ascx.cs">
+      <DependentUpon>DBMFactStrategyPropageValues.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMFactStrategyPropageValues.ascx.designer.cs">
+      <DependentUpon>DBMFactStrategyPropageValues.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMFactSupplyPropageValues.ascx.cs">
+      <DependentUpon>DBMFactSupplyPropageValues.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMFactSupplyPropageValues.ascx.designer.cs">
+      <DependentUpon>DBMFactSupplyPropageValues.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMSetCurrentDay.ascx.cs">
+      <DependentUpon>DBMSetCurrentDay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DBMSetCurrentDay.ascx.designer.cs">
+      <DependentUpon>DBMSetCurrentDay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdAdjustLowDemand.ascx.cs">
+      <DependentUpon>DmdAdjustLowDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdAdjustLowDemand.ascx.designer.cs">
+      <DependentUpon>DmdAdjustLowDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdAdjustSpikes.ascx.cs">
+      <DependentUpon>DmdAdjustSpikes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdAdjustSpikes.ascx.designer.cs">
+      <DependentUpon>DmdAdjustSpikes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdInitializeAdjustments.ascx.cs">
+      <DependentUpon>DmdInitializeAdjustments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdInitializeAdjustments.ascx.designer.cs">
+      <DependentUpon>DmdInitializeAdjustments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdInvoiceLineByType.ascx.cs">
+      <DependentUpon>DmdInvoiceLineByType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdInvoiceLineByType.ascx.designer.cs">
+      <DependentUpon>DmdInvoiceLineByType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdProdKitDemand.ascx.cs">
+      <DependentUpon>DmdProdKitDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdProdKitDemand.ascx.designer.cs">
+      <DependentUpon>DmdProdKitDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupDemand.ascx.cs">
+      <DependentUpon>DmdRollupDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupDemand.ascx.designer.cs">
+      <DependentUpon>DmdRollupDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupFromDmdLines.ascx.cs">
+      <DependentUpon>DmdRollupFromDmdLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupFromDmdLines.ascx.designer.cs">
+      <DependentUpon>DmdRollupFromDmdLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupFromLines.ascx.cs">
+      <DependentUpon>DmdRollupFromLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupFromLines.ascx.designer.cs">
+      <DependentUpon>DmdRollupFromLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupFromSupercededItems.ascx.cs">
+      <DependentUpon>DmdRollupFromSupercededItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupFromSupercededItems.ascx.designer.cs">
+      <DependentUpon>DmdRollupFromSupercededItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupProcessDemand.ascx.cs">
+      <DependentUpon>DmdRollupProcessDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupProcessDemand.ascx.designer.cs">
+      <DependentUpon>DmdRollupProcessDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupTransferDemand.ascx.cs">
+      <DependentUpon>DmdRollupTransferDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdRollupTransferDemand.ascx.designer.cs">
+      <DependentUpon>DmdRollupTransferDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsClassifySeasonal.ascx.cs">
+      <DependentUpon>DmdStatsClassifySeasonal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsClassifySeasonal.ascx.designer.cs">
+      <DependentUpon>DmdStatsClassifySeasonal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsClassifySpikes.ascx.cs">
+      <DependentUpon>DmdStatsClassifySpikes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsClassifySpikes.ascx.designer.cs">
+      <DependentUpon>DmdStatsClassifySpikes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstAddByFcstType.ascx.cs">
+      <DependentUpon>FcstAddByFcstType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstAddByFcstType.ascx.designer.cs">
+      <DependentUpon>FcstAddByFcstType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstInitializeQty.ascx.cs">
+      <DependentUpon>FcstInitializeQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstInitializeQty.ascx.designer.cs">
+      <DependentUpon>FcstInitializeQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstMethodInitFcstPatternQty.ascx.cs">
+      <DependentUpon>FcstMethodInitFcstPatternQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstMethodInitFcstPatternQty.ascx.designer.cs">
+      <DependentUpon>FcstMethodInitFcstPatternQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstRollupFromFcstLines.ascx.cs">
+      <DependentUpon>FcstRollupFromFcstLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstRollupFromFcstLines.ascx.designer.cs">
+      <DependentUpon>FcstRollupFromFcstLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstSetFcstConsumedQty.ascx.cs">
+      <DependentUpon>FcstSetFcstConsumedQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\FcstSetFcstConsumedQty.ascx.designer.cs">
+      <DependentUpon>FcstSetFcstConsumedQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvAssignStockStrategy.ascx.cs">
+      <DependentUpon>InvAssignStockStrategy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvAssignStockStrategy.ascx.designer.cs">
+      <DependentUpon>InvAssignStockStrategy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcDmdQty.ascx.cs">
+      <DependentUpon>InvCalcDmdQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcDmdQty.ascx.designer.cs">
+      <DependentUpon>InvCalcDmdQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcDmdQtyFromDmdLines.ascx.cs">
+      <DependentUpon>InvCalcDmdQtyFromDmdLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcDmdQtyFromDmdLines.ascx.designer.cs">
+      <DependentUpon>InvCalcDmdQtyFromDmdLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcFcstQty.ascx.cs">
+      <DependentUpon>InvCalcFcstQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcFcstQty.ascx.designer.cs">
+      <DependentUpon>InvCalcFcstQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcInvAvailQty.ascx.cs">
+      <DependentUpon>InvCalcInvAvailQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcInvAvailQty.ascx.designer.cs">
+      <DependentUpon>InvCalcInvAvailQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcPlanInQty.ascx.cs">
+      <DependentUpon>InvCalcPlanInQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcPlanInQty.ascx.designer.cs">
+      <DependentUpon>InvCalcPlanInQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcPlanOHQty.ascx.cs">
+      <DependentUpon>InvCalcPlanOHQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcPlanOHQty.ascx.designer.cs">
+      <DependentUpon>InvCalcPlanOHQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcPlanOHQtyFromPlan.ascx.cs">
+      <DependentUpon>InvCalcPlanOHQtyFromPlan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcPlanOHQtyFromPlan.ascx.designer.cs">
+      <DependentUpon>InvCalcPlanOHQtyFromPlan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcPlanOutQty.ascx.cs">
+      <DependentUpon>InvCalcPlanOutQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcPlanOutQty.ascx.designer.cs">
+      <DependentUpon>InvCalcPlanOutQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcRecQtyFromReceiptLines.ascx.cs">
+      <DependentUpon>InvCalcRecQtyFromReceiptLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcRecQtyFromReceiptLines.ascx.designer.cs">
+      <DependentUpon>InvCalcRecQtyFromReceiptLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcStats.ascx.cs">
+      <DependentUpon>InvCalcStats.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcStats.ascx.designer.cs">
+      <DependentUpon>InvCalcStats.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSupLeadTime.ascx.cs">
+      <DependentUpon>InvCalcSupLeadTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSupLeadTime.ascx.designer.cs">
+      <DependentUpon>InvCalcSupLeadTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSpotTurns.ascx.cs">
+      <DependentUpon>InvCalcSpotTurns.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSpotTurns.ascx.designer.cs">
+      <DependentUpon>InvCalcSpotTurns.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyFromDemand.ascx.cs">
+      <DependentUpon>InvCalcSurplusUsageQtyFromDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyFromDemand.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusUsageQtyFromDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvIdentifyNewItems.ascx.cs">
+      <DependentUpon>InvIdentifyNewItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvIdentifyNewItems.ascx.designer.cs">
+      <DependentUpon>InvIdentifyNewItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvPosCalcPlanOHQty.ascx.cs">
+      <DependentUpon>InvPosCalcPlanOHQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvPosCalcPlanOHQty.ascx.designer.cs">
+      <DependentUpon>InvPosCalcPlanOHQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvPosInitToPriorPeriod.ascx.cs">
+      <DependentUpon>InvPosInitToPriorPeriod.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvPosInitToPriorPeriod.ascx.designer.cs">
+      <DependentUpon>InvPosInitToPriorPeriod.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSelectGetItemLocsByItem.ascx.cs">
+      <DependentUpon>InvSelectGetItemLocsByItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSelectGetItemLocsByItem.ascx.designer.cs">
+      <DependentUpon>InvSelectGetItemLocsByItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSurplusRollupByFamily.ascx.cs">
+      <DependentUpon>InvSurplusRollupByFamily.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSurplusRollupByFamily.ascx.designer.cs">
+      <DependentUpon>InvSurplusRollupByFamily.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSurplusRollupByItemPercentMethod.ascx.cs">
+      <DependentUpon>InvSurplusRollupByItemPercentMethod.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSurplusRollupByItemPercentMethod.ascx.designer.cs">
+      <DependentUpon>InvSurplusRollupByItemPercentMethod.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanOrderFixedQtyInit.ascx.cs">
+      <DependentUpon>PlanOrderFixedQtyInit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanOrderFixedQtyInit.ascx.designer.cs">
+      <DependentUpon>PlanOrderFixedQtyInit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPropogatePlanParams.ascx.cs">
+      <DependentUpon>PlanPropogatePlanParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPropogatePlanParams.ascx.designer.cs">
+      <DependentUpon>PlanPropogatePlanParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RankingToRankABC.ascx.cs">
+      <DependentUpon>RankingToRankABC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RankingToRankABC.ascx.designer.cs">
+      <DependentUpon>RankingToRankABC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileSurplus.ascx.cs">
+      <DependentUpon>ReconcileSurplus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileSurplus.ascx.designer.cs">
+      <DependentUpon>ReconcileSurplus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyDmdStatsTotQty.ascx.cs">
+      <DependentUpon>InvCalcSurplusUsageQtyDmdStatsTotQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyDmdStatsTotQty.ascx.designer.cs">
+      <DependentUpon>InvCalcSurplusUsageQtyDmdStatsTotQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvDmdQtyRollupDemand.ascx.cs">
+      <DependentUpon>InvDmdQtyRollupDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvDmdQtyRollupDemand.ascx.designer.cs">
+      <DependentUpon>InvDmdQtyRollupDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvPosCurrOrderPointQty.ascx.cs">
+      <DependentUpon>InvPosCurrOrderPointQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvPosCurrOrderPointQty.ascx.designer.cs">
+      <DependentUpon>InvPosCurrOrderPointQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSetCurrSSandCSQty.ascx.cs">
+      <DependentUpon>InvSetCurrSSandCSQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSetCurrSSandCSQty.ascx.designer.cs">
+      <DependentUpon>InvSetCurrSSandCSQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvUpdateRecStatus.ascx.cs">
+      <DependentUpon>InvUpdateRecStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvUpdateRecStatus.ascx.designer.cs">
+      <DependentUpon>InvUpdateRecStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ItemLocRelAddMultipleItems.ascx.cs">
+      <DependentUpon>ItemLocRelAddMultipleItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ItemLocRelAddMultipleItems.ascx.designer.cs">
+      <DependentUpon>ItemLocRelAddMultipleItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanCalcPeriodEndingBalances.ascx.cs">
+      <DependentUpon>PlanCalcPeriodEndingBalances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanCalcPeriodEndingBalances.ascx.designer.cs">
+      <DependentUpon>PlanCalcPeriodEndingBalances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanCalcTransferAvailQty.ascx.cs">
+      <DependentUpon>PlanCalcTransferAvailQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanCalcTransferAvailQty.ascx.designer.cs">
+      <DependentUpon>PlanCalcTransferAvailQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanCalcTransferCriteriaQty.ascx.cs">
+      <DependentUpon>PlanCalcTransferCriteriaQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanCalcTransferCriteriaQty.ascx.designer.cs">
+      <DependentUpon>PlanCalcTransferCriteriaQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanClassifyDeExpedite.ascx.cs">
+      <DependentUpon>PlanClassifyDeExpedite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanClassifyDeExpedite.ascx.designer.cs">
+      <DependentUpon>PlanClassifyDeExpedite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanClassifyExpedite.ascx.cs">
+      <DependentUpon>PlanClassifyExpedite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanClassifyExpedite.ascx.designer.cs">
+      <DependentUpon>PlanClassifyExpedite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanClassifyMRP.ascx.cs">
+      <DependentUpon>PlanClassifyMRP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanClassifyMRP.ascx.designer.cs">
+      <DependentUpon>PlanClassifyMRP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanClassifyOrderStatus.ascx.cs">
+      <DependentUpon>PlanClassifyOrderStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanClassifyOrderStatus.ascx.designer.cs">
+      <DependentUpon>PlanClassifyOrderStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPPOReceipts.ascx.cs">
+      <DependentUpon>PlanDetailAddERPPOReceipts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPPOReceipts.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddERPPOReceipts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPSecProcess.ascx.cs">
+      <DependentUpon>PlanDetailAddERPSecProcess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPSecProcess.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddERPSecProcess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPSOLines.ascx.cs">
+      <DependentUpon>PlanDetailAddERPSOLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPSOLines.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddERPSOLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPTOReceipts.ascx.cs">
+      <DependentUpon>PlanDetailAddERPTOReceipts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanDetailAddERPTOReceipts.ascx.designer.cs">
+      <DependentUpon>PlanDetailAddERPTOReceipts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanForecastedActivity.ascx.cs">
+      <DependentUpon>PlanForecastedActivity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanForecastedActivity.ascx.designer.cs">
+      <DependentUpon>PlanForecastedActivity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanInitialize.ascx.cs">
+      <DependentUpon>PlanInitialize.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanInitialize.ascx.designer.cs">
+      <DependentUpon>PlanInitialize.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanInitPlanDetail.ascx.cs">
+      <DependentUpon>PlanInitPlanDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanInitPlanDetail.ascx.designer.cs">
+      <DependentUpon>PlanInitPlanDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanInitPlanEndingBalances.ascx.cs">
+      <DependentUpon>PlanInitPlanEndingBalances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanInitPlanEndingBalances.ascx.designer.cs">
+      <DependentUpon>PlanInitPlanEndingBalances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPeriodEndingBalancesPO.ascx.cs">
+      <DependentUpon>PlanPeriodEndingBalancesPO.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPeriodEndingBalancesPO.ascx.designer.cs">
+      <DependentUpon>PlanPeriodEndingBalancesPO.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPeriodEndingBalancesProd.ascx.cs">
+      <DependentUpon>PlanPeriodEndingBalancesProd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPeriodEndingBalancesProd.ascx.designer.cs">
+      <DependentUpon>PlanPeriodEndingBalancesProd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPeriodEndingBalancesSecProc.ascx.cs">
+      <DependentUpon>PlanPeriodEndingBalancesSecProc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPeriodEndingBalancesSecProc.ascx.designer.cs">
+      <DependentUpon>PlanPeriodEndingBalancesSecProc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPeriodEndingBalancesTO.ascx.cs">
+      <DependentUpon>PlanPeriodEndingBalancesTO.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanPeriodEndingBalancesTO.ascx.designer.cs">
+      <DependentUpon>PlanPeriodEndingBalancesTO.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanRollupfactPlanDetail.ascx.cs">
+      <DependentUpon>PlanRollupfactPlanDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanRollupfactPlanDetail.ascx.designer.cs">
+      <DependentUpon>PlanRollupfactPlanDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetLeadTime.ascx.cs">
+      <DependentUpon>PlanSetLeadTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetLeadTime.ascx.designer.cs">
+      <DependentUpon>PlanSetLeadTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetOrderFixedQty.ascx.cs">
+      <DependentUpon>PlanSetOrderFixedQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetOrderFixedQty.ascx.designer.cs">
+      <DependentUpon>PlanSetOrderFixedQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetOrderLevelQty.ascx.cs">
+      <DependentUpon>PlanSetOrderLevelQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetOrderLevelQty.ascx.designer.cs">
+      <DependentUpon>PlanSetOrderLevelQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetOrderType.ascx.cs">
+      <DependentUpon>PlanSetOrderType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetOrderType.ascx.designer.cs">
+      <DependentUpon>PlanSetOrderType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetPlanDate.ascx.cs">
+      <DependentUpon>PlanSetPlanDate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanSetPlanDate.ascx.designer.cs">
+      <DependentUpon>PlanSetPlanDate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanUpdatePlanOnHandQty.ascx.cs">
+      <DependentUpon>PlanUpdatePlanOnHandQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\PlanUpdatePlanOnHandQty.ascx.designer.cs">
+      <DependentUpon>PlanUpdatePlanOnHandQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RankingByPercentFactDemandTerms.ascx.cs">
+      <DependentUpon>RankingByPercentFactDemandTerms.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RankingByPercentFactDemandTerms.ascx.designer.cs">
+      <DependentUpon>RankingByPercentFactDemandTerms.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RankingToRankPutAway.ascx.cs">
+      <DependentUpon>RankingToRankPutAway.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RankingToRankPutAway.ascx.designer.cs">
+      <DependentUpon>RankingToRankPutAway.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryDemandParams.ascx.cs">
+      <DependentUpon>ReconcileInventoryDemandParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryDemandParams.ascx.designer.cs">
+      <DependentUpon>ReconcileInventoryDemandParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryForecastParams.ascx.cs">
+      <DependentUpon>ReconcileInventoryForecastParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryForecastParams.ascx.designer.cs">
+      <DependentUpon>ReconcileInventoryForecastParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryInvPosParams.ascx.cs">
+      <DependentUpon>ReconcileInventoryInvPosParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryInvPosParams.ascx.designer.cs">
+      <DependentUpon>ReconcileInventoryInvPosParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryPlanParams.ascx.cs">
+      <DependentUpon>ReconcileInventoryPlanParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryPlanParams.ascx.designer.cs">
+      <DependentUpon>ReconcileInventoryPlanParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryStrategyParams.ascx.cs">
+      <DependentUpon>ReconcileInventoryStrategyParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventoryStrategyParams.ascx.designer.cs">
+      <DependentUpon>ReconcileInventoryStrategyParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventorySupplyParams.ascx.cs">
+      <DependentUpon>ReconcileInventorySupplyParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\ReconcileInventorySupplyParams.ascx.designer.cs">
+      <DependentUpon>ReconcileInventorySupplyParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RunReport.ascx.cs">
+      <DependentUpon>RunReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RunReport.ascx.designer.cs">
+      <DependentUpon>RunReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RunSSISPackage.ascx.cs">
+      <DependentUpon>RunSSISPackage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\RunSSISPackage.ascx.designer.cs">
+      <DependentUpon>RunSSISPackage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratAssignCriticalyFK.ascx.cs">
+      <DependentUpon>StratAssignCriticalyFK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratAssignCriticalyFK.ascx.designer.cs">
+      <DependentUpon>StratAssignCriticalyFK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratAssignProbDensity.ascx.cs">
+      <DependentUpon>StratAssignProbDensity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratAssignProbDensity.ascx.designer.cs">
+      <DependentUpon>StratAssignProbDensity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratAssignTargetFK.ascx.cs">
+      <DependentUpon>StratAssignTargetFK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratAssignTargetFK.ascx.designer.cs">
+      <DependentUpon>StratAssignTargetFK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcEOQ.ascx.cs">
+      <DependentUpon>StratCalcEOQ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcEOQ.ascx.designer.cs">
+      <DependentUpon>StratCalcEOQ.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcMinDayQtyForSupPurchGroupAndLoc.ascx.cs">
+      <DependentUpon>StratCalcMinDayQtyForSupPurchGroupAndLoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcMinDayQtyForSupPurchGroupAndLoc.ascx.designer.cs">
+      <DependentUpon>StratCalcMinDayQtyForSupPurchGroupAndLoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcPlanDates.ascx.cs">
+      <DependentUpon>StratCalcPlanDates.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcPlanDates.ascx.designer.cs">
+      <DependentUpon>StratCalcPlanDates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcStratCost.ascx.cs">
+      <DependentUpon>StratCalcStratCost.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcStratCost.ascx.designer.cs">
+      <DependentUpon>StratCalcStratCost.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcStratFcstQty.ascx.cs">
+      <DependentUpon>StratCalcStratFcstQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcStratFcstQty.ascx.designer.cs">
+      <DependentUpon>StratCalcStratFcstQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcStratOnHandQty.ascx.cs">
+      <DependentUpon>StratCalcStratOnHandQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCalcStratOnHandQty.ascx.designer.cs">
+      <DependentUpon>StratCalcStratOnHandQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCompareAvailQty.ascx.cs">
+      <DependentUpon>StratCompareAvailQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCompareAvailQty.ascx.designer.cs">
+      <DependentUpon>StratCompareAvailQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCompareCurrQty.ascx.cs">
+      <DependentUpon>StratCompareCurrQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCompareCurrQty.ascx.designer.cs">
+      <DependentUpon>StratCompareCurrQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCompareOnHandQty.ascx.cs">
+      <DependentUpon>StratCompareOnHandQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCompareOnHandQty.ascx.designer.cs">
+      <DependentUpon>StratCompareOnHandQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCreateStratDetailsFromEvents.ascx.cs">
+      <DependentUpon>StratCreateStratDetailsFromEvents.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCreateStratDetailsFromEvents.ascx.designer.cs">
+      <DependentUpon>StratCreateStratDetailsFromEvents.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCreateTargetsByLoc.ascx.cs">
+      <DependentUpon>StratCreateTargetsByLoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratCreateTargetsByLoc.ascx.designer.cs">
+      <DependentUpon>StratCreateTargetsByLoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StrategyDetailDelete.ascx.cs">
+      <DependentUpon>StrategyDetailDelete.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StrategyDetailDelete.ascx.designer.cs">
+      <DependentUpon>StrategyDetailDelete.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StrategyEventSetExpired.ascx.cs">
+      <DependentUpon>StrategyEventSetExpired.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StrategyEventSetExpired.ascx.designer.cs">
+      <DependentUpon>StrategyEventSetExpired.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratInitMinDayQty.ascx.cs">
+      <DependentUpon>StratInitMinDayQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratInitMinDayQty.ascx.designer.cs">
+      <DependentUpon>StratInitMinDayQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratInitMinMaxOptOrdQty.ascx.cs">
+      <DependentUpon>StratInitMinMaxOptOrdQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratInitMinMaxOptOrdQty.ascx.designer.cs">
+      <DependentUpon>StratInitMinMaxOptOrdQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratReconcileForecast.ascx.cs">
+      <DependentUpon>StratReconcileForecast.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratReconcileForecast.ascx.designer.cs">
+      <DependentUpon>StratReconcileForecast.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratRollupStratDetails.ascx.cs">
+      <DependentUpon>StratRollupStratDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratRollupStratDetails.ascx.designer.cs">
+      <DependentUpon>StratRollupStratDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSelectParams.ascx.cs">
+      <DependentUpon>StratSelectParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSelectParams.ascx.designer.cs">
+      <DependentUpon>StratSelectParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetCycleStock.ascx.cs">
+      <DependentUpon>StratSetCycleStock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetCycleStock.ascx.designer.cs">
+      <DependentUpon>StratSetCycleStock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetOrderPointQty.ascx.cs">
+      <DependentUpon>StratSetOrderPointQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetOrderPointQty.ascx.designer.cs">
+      <DependentUpon>StratSetOrderPointQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetOrderPointQtyMinStratFcstQty.ascx.cs">
+      <DependentUpon>StratSetOrderPointQtyMinStratFcstQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetOrderPointQtyMinStratFcstQty.ascx.designer.cs">
+      <DependentUpon>StratSetOrderPointQtyMinStratFcstQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetOrderQty.ascx.cs">
+      <DependentUpon>StratSetOrderQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetOrderQty.ascx.designer.cs">
+      <DependentUpon>StratSetOrderQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSafetyStockDays.ascx.cs">
+      <DependentUpon>StratSetSafetyStockDays.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSafetyStockDays.ascx.designer.cs">
+      <DependentUpon>StratSetSafetyStockDays.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSafetyStockSeasonalDays.ascx.cs">
+      <DependentUpon>StratSetSafetyStockSeasonalDays.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSafetyStockSeasonalDays.ascx.designer.cs">
+      <DependentUpon>StratSetSafetyStockSeasonalDays.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetsCPStratFcstQty.ascx.cs">
+      <DependentUpon>StratSetsCPStratFcstQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetsCPStratFcstQty.ascx.designer.cs">
+      <DependentUpon>StratSetsCPStratFcstQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSSDaysByForecast.ascx.cs">
+      <DependentUpon>StratSetSSDaysByForecast.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSSDaysByForecast.ascx.designer.cs">
+      <DependentUpon>StratSetSSDaysByForecast.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSSQty.ascx.cs">
+      <DependentUpon>StratSetSSQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSSQty.ascx.designer.cs">
+      <DependentUpon>StratSetSSQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStdDevToFcstQty.ascx.cs">
+      <DependentUpon>StratSetStdDevToFcstQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStdDevToFcstQty.ascx.designer.cs">
+      <DependentUpon>StratSetStdDevToFcstQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStrategyForecastToDemandStatsAverage.ascx.cs">
+      <DependentUpon>StratSetStrategyForecastToDemandStatsAverage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStrategyForecastToDemandStatsAverage.ascx.designer.cs">
+      <DependentUpon>StratSetStrategyForecastToDemandStatsAverage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratLeadTimeDemandQty.ascx.cs">
+      <DependentUpon>StratSetStratLeadTimeDemandQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratLeadTimeDemandQty.ascx.designer.cs">
+      <DependentUpon>StratSetStratLeadTimeDemandQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratLeadTimeDemandQtyMinDayQty.ascx.cs">
+      <DependentUpon>StratSetStratLeadTimeDemandQtyMinDayQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratLeadTimeDemandQtyMinDayQty.ascx.designer.cs">
+      <DependentUpon>StratSetStratLeadTimeDemandQtyMinDayQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratLIQty.ascx.cs">
+      <DependentUpon>StratSetStratLIQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratLIQty.ascx.designer.cs">
+      <DependentUpon>StratSetStratLIQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratSSQty.ascx.cs">
+      <DependentUpon>StratSetStratSSQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratSSQty.ascx.designer.cs">
+      <DependentUpon>StratSetStratSSQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratSSQtyConfigValue.ascx.cs">
+      <DependentUpon>StratSetStratSSQtyConfigValue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratSSQtyConfigValue.ascx.designer.cs">
+      <DependentUpon>StratSetStratSSQtyConfigValue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratSSQtyMinStockQty.ascx.cs">
+      <DependentUpon>StratSetStratSSQtyMinStockQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratSSQtyMinStockQty.ascx.designer.cs">
+      <DependentUpon>StratSetStratSSQtyMinStockQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratSSQtyMinValue.ascx.cs">
+      <DependentUpon>StratSetStratSSQtyMinValue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratSSQtyMinValue.ascx.designer.cs">
+      <DependentUpon>StratSetStratSSQtyMinValue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratStdDevQty.ascx.cs">
+      <DependentUpon>StratSetStratStdDevQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetStratStdDevQty.ascx.designer.cs">
+      <DependentUpon>StratSetStratStdDevQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSupplyPkgQty.ascx.cs">
+      <DependentUpon>StratSetSupplyPkgQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratSetSupplyPkgQty.ascx.designer.cs">
+      <DependentUpon>StratSetSupplyPkgQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratTargetOptimize.ascx.cs">
+      <DependentUpon>StratTargetOptimize.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratTargetOptimize.ascx.designer.cs">
+      <DependentUpon>StratTargetOptimize.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratUpdateProbDenConfigFK.ascx.cs">
+      <DependentUpon>StratUpdateProbDenConfigFK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratUpdateProbDenConfigFK.ascx.designer.cs">
+      <DependentUpon>StratUpdateProbDenConfigFK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratUpdateStratLeadTime.ascx.cs">
+      <DependentUpon>StratUpdateStratLeadTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\StratUpdateStratLeadTime.ascx.designer.cs">
+      <DependentUpon>StratUpdateStratLeadTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupAddMissingTransfers.ascx.cs">
+      <DependentUpon>SupAddMissingTransfers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupAddMissingTransfers.ascx.designer.cs">
+      <DependentUpon>SupAddMissingTransfers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupAddMissingTransferSuplItems.ascx.cs">
+      <DependentUpon>SupAddMissingTransferSuplItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupAddMissingTransferSuplItems.ascx.designer.cs">
+      <DependentUpon>SupAddMissingTransferSuplItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupAssignSupplier.ascx.cs">
+      <DependentUpon>SupAssignSupplier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupAssignSupplier.ascx.designer.cs">
+      <DependentUpon>SupAssignSupplier.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupCalcAvgLeadTimeFromReceiptLines.ascx.cs">
+      <DependentUpon>SupCalcAvgLeadTimeFromReceiptLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupCalcAvgLeadTimeFromReceiptLines.ascx.designer.cs">
+      <DependentUpon>SupCalcAvgLeadTimeFromReceiptLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupCreateSupPlan.ascx.cs">
+      <DependentUpon>SupCreateSupPlan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupCreateSupPlan.ascx.designer.cs">
+      <DependentUpon>SupCreateSupPlan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupCreateSupStats.ascx.cs">
+      <DependentUpon>SupCreateSupStats.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupCreateSupStats.ascx.designer.cs">
+      <DependentUpon>SupCreateSupStats.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupExportSupPlan.ascx.cs">
+      <DependentUpon>SupExportSupPlan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupExportSupPlan.ascx.designer.cs">
+      <DependentUpon>SupExportSupPlan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupLeadTimeCompare.ascx.cs">
+      <DependentUpon>SupLeadTimeCompare.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupLeadTimeCompare.ascx.designer.cs">
+      <DependentUpon>SupLeadTimeCompare.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupLeadTimeReceiptLines.ascx.cs">
+      <DependentUpon>SupLeadTimeReceiptLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupLeadTimeReceiptLines.ascx.designer.cs">
+      <DependentUpon>SupLeadTimeReceiptLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupOrderCreateFromPlanByLocPOGroup.ascx.cs">
+      <DependentUpon>SupOrderCreateFromPlanByLocPOGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupOrderCreateFromPlanByLocPOGroup.ascx.designer.cs">
+      <DependentUpon>SupOrderCreateFromPlanByLocPOGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupOrderCreateFromPlanTransferOrder.ascx.cs">
+      <DependentUpon>SupOrderCreateFromPlanTransferOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupOrderCreateFromPlanTransferOrder.ascx.designer.cs">
+      <DependentUpon>SupOrderCreateFromPlanTransferOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcDmdQtyDmdStats.ascx.cs">
+      <DependentUpon>SupPkgCalcDmdQtyDmdStats.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcDmdQtyDmdStats.ascx.designer.cs">
+      <DependentUpon>SupPkgCalcDmdQtyDmdStats.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcNbrSupPkgQty.ascx.cs">
+      <DependentUpon>SupPkgCalcNbrSupPkgQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcNbrSupPkgQty.ascx.designer.cs">
+      <DependentUpon>SupPkgCalcNbrSupPkgQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcReset.ascx.cs">
+      <DependentUpon>SupPkgCalcReset.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcReset.ascx.designer.cs">
+      <DependentUpon>SupPkgCalcReset.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcThresholdQtyDays.ascx.cs">
+      <DependentUpon>SupPkgCalcThresholdQtyDays.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcThresholdQtyDays.ascx.designer.cs">
+      <DependentUpon>SupPkgCalcThresholdQtyDays.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcUpdateOpt.ascx.cs">
+      <DependentUpon>SupPkgCalcUpdateOpt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgCalcUpdateOpt.ascx.designer.cs">
+      <DependentUpon>SupPkgCalcUpdateOpt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgOptDiffQty.ascx.cs">
+      <DependentUpon>SupPkgOptDiffQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPkgOptDiffQty.ascx.designer.cs">
+      <DependentUpon>SupPkgOptDiffQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupplySupPkgAdj.ascx.cs">
+      <DependentUpon>SupplySupPkgAdj.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupplySupPkgAdj.ascx.designer.cs">
+      <DependentUpon>SupplySupPkgAdj.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPurchGroupStatusByType.ascx.cs">
+      <DependentUpon>SupPurchGroupStatusByType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupPurchGroupStatusByType.ascx.designer.cs">
+      <DependentUpon>SupPurchGroupStatusByType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupRankPurchasingSuppliers.ascx.cs">
+      <DependentUpon>SupRankPurchasingSuppliers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupRankPurchasingSuppliers.ascx.designer.cs">
+      <DependentUpon>SupRankPurchasingSuppliers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupRankTransferSuppliers.ascx.cs">
+      <DependentUpon>SupRankTransferSuppliers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupRankTransferSuppliers.ascx.designer.cs">
+      <DependentUpon>SupRankTransferSuppliers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetFactSupplySupPkgQty.ascx.cs">
+      <DependentUpon>SupSetFactSupplySupPkgQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetFactSupplySupPkgQty.ascx.designer.cs">
+      <DependentUpon>SupSetFactSupplySupPkgQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetLeadTime.ascx.cs">
+      <DependentUpon>SupSetLeadTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetLeadTime.ascx.designer.cs">
+      <DependentUpon>SupSetLeadTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupLeadTimeFromSupStats.ascx.cs">
+      <DependentUpon>SupSetSupLeadTimeFromSupStats.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupLeadTimeFromSupStats.ascx.designer.cs">
+      <DependentUpon>SupSetSupLeadTimeFromSupStats.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyPackageQty.ascx.cs">
+      <DependentUpon>SupSetSupplyPackageQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyPackageQty.ascx.designer.cs">
+      <DependentUpon>SupSetSupplyPackageQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyProcessQtyFromReceipts.ascx.cs">
+      <DependentUpon>SupSetSupplyProcessQtyFromReceipts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyProcessQtyFromReceipts.ascx.designer.cs">
+      <DependentUpon>SupSetSupplyProcessQtyFromReceipts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyProdOrderQtyFromReceipts.ascx.cs">
+      <DependentUpon>SupSetSupplyProdOrderQtyFromReceipts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyProdOrderQtyFromReceipts.ascx.designer.cs">
+      <DependentUpon>SupSetSupplyProdOrderQtyFromReceipts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyRecQtyFromReceipts.ascx.cs">
+      <DependentUpon>SupSetSupplyRecQtyFromReceipts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyRecQtyFromReceipts.ascx.designer.cs">
+      <DependentUpon>SupSetSupplyRecQtyFromReceipts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyTransQtyFromReceipts.ascx.cs">
+      <DependentUpon>SupSetSupplyTransQtyFromReceipts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SupSetSupplyTransQtyFromReceipts.ascx.designer.cs">
+      <DependentUpon>SupSetSupplyTransQtyFromReceipts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusCalcAvailQty.ascx.cs">
+      <DependentUpon>SurplusCalcAvailQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusCalcAvailQty.ascx.designer.cs">
+      <DependentUpon>SurplusCalcAvailQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusTransferCreate.ascx.cs">
+      <DependentUpon>SurplusTransferCreate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusTransferCreate.ascx.designer.cs">
+      <DependentUpon>SurplusTransferCreate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusTransferNbrTransferTo.ascx.cs">
+      <DependentUpon>SurplusTransferNbrTransferTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusTransferNbrTransferTo.ascx.designer.cs">
+      <DependentUpon>SurplusTransferNbrTransferTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusTransferNetCalcOrderQty.ascx.cs">
+      <DependentUpon>SurplusTransferNetCalcOrderQty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusTransferNetCalcOrderQty.ascx.designer.cs">
+      <DependentUpon>SurplusTransferNetCalcOrderQty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusTransferReset.ascx.cs">
+      <DependentUpon>SurplusTransferReset.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\SurplusTransferReset.ascx.designer.cs">
+      <DependentUpon>SurplusTransferReset.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\TransferOrderCreateFromSurplusTransfer.ascx.cs">
+      <DependentUpon>TransferOrderCreateFromSurplusTransfer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\TransferOrderCreateFromSurplusTransfer.ascx.designer.cs">
+      <DependentUpon>TransferOrderCreateFromSurplusTransfer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\TransOrderCreateFromPlan.ascx.cs">
+      <DependentUpon>TransOrderCreateFromPlan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\TransOrderCreateFromPlan.ascx.designer.cs">
+      <DependentUpon>TransOrderCreateFromPlan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\WriteOutputToFile.ascx.cs">
+      <DependentUpon>WriteOutputToFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\WriteOutputToFile.ascx.designer.cs">
+      <DependentUpon>WriteOutputToFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RunResults.aspx.cs">
+      <DependentUpon>RunResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RunResults.aspx.designer.cs">
+      <DependentUpon>RunResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDataSource.aspx.cs">
+      <DependentUpon>SelectDataSource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectDataSource.aspx.designer.cs">
+      <DependentUpon>SelectDataSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\AssignSupPurchGroup.aspx.cs">
+      <DependentUpon>AssignSupPurchGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\AssignSupPurchGroup.aspx.designer.cs">
+      <DependentUpon>AssignSupPurchGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Criticality.aspx.cs">
+      <DependentUpon>Criticality.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Criticality.aspx.designer.cs">
+      <DependentUpon>Criticality.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\DoubleExpSmoothParams.ascx.cs">
+      <DependentUpon>DoubleExpSmoothParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\DoubleExpSmoothParams.ascx.designer.cs">
+      <DependentUpon>DoubleExpSmoothParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\FcstPatternParams.ascx.cs">
+      <DependentUpon>FcstPatternParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\FcstPatternParams.ascx.designer.cs">
+      <DependentUpon>FcstPatternParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\MovingAvgParams.ascx.cs">
+      <DependentUpon>MovingAvgParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\MovingAvgParams.ascx.designer.cs">
+      <DependentUpon>MovingAvgParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\SimpleAvgParams.ascx.cs">
+      <DependentUpon>SimpleAvgParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\SimpleAvgParams.ascx.designer.cs">
+      <DependentUpon>SimpleAvgParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\SingleExpSmoothParams.ascx.cs">
+      <DependentUpon>SingleExpSmoothParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\FcstMethodParamsControls\SingleExpSmoothParams.ascx.designer.cs">
+      <DependentUpon>SingleExpSmoothParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FcstMethods.aspx.cs">
+      <DependentUpon>FcstMethods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\FcstMethods.aspx.designer.cs">
+      <DependentUpon>FcstMethods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FcstPatterns.aspx.cs">
+      <DependentUpon>FcstPatterns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\FcstPatterns.aspx.designer.cs">
+      <DependentUpon>FcstPatterns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemLocRelations.aspx.cs">
+      <DependentUpon>ItemLocRelations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemLocRelations.aspx.designer.cs">
+      <DependentUpon>ItemLocRelations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelations.aspx.cs">
+      <DependentUpon>ItemRelations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelations.aspx.designer.cs">
+      <DependentUpon>ItemRelations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelDetailFcstPattern.ascx.cs">
+      <DependentUpon>ItemLocRelDetailFcstPattern.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelDetailFcstPattern.ascx.designer.cs">
+      <DependentUpon>ItemLocRelDetailFcstPattern.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelDetailKit.ascx.cs">
+      <DependentUpon>ItemLocRelDetailKit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelDetailKit.ascx.designer.cs">
+      <DependentUpon>ItemLocRelDetailKit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelGrid.ascx.cs">
+      <DependentUpon>ItemLocRelGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelGrid.ascx.designer.cs">
+      <DependentUpon>ItemLocRelGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelTree.ascx.cs">
+      <DependentUpon>ItemLocRelTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelTree.ascx.designer.cs">
+      <DependentUpon>ItemLocRelTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemRelDetail.ascx.cs">
+      <DependentUpon>ItemRelDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemRelDetail.ascx.designer.cs">
+      <DependentUpon>ItemRelDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemRelDetailFcstPattern.ascx.cs">
+      <DependentUpon>ItemRelDetailFcstPattern.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemRelDetailFcstPattern.ascx.designer.cs">
+      <DependentUpon>ItemRelDetailFcstPattern.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemRelDetailKit.ascx.cs">
+      <DependentUpon>ItemRelDetailKit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemRelDetailKit.ascx.designer.cs">
+      <DependentUpon>ItemRelDetailKit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemRelTree.ascx.cs">
+      <DependentUpon>ItemRelTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemRelTree.ascx.designer.cs">
+      <DependentUpon>ItemRelTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemSuppliers.aspx.cs">
+      <DependentUpon>ItemSuppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemSuppliers.aspx.designer.cs">
+      <DependentUpon>ItemSuppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\LifeCycleAnalysis.aspx.cs">
+      <DependentUpon>LifeCycleAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\LifeCycleAnalysis.aspx.designer.cs">
+      <DependentUpon>LifeCycleAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Locations.aspx.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Locations.aspx.designer.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ManageCustFcst.aspx.cs">
+      <DependentUpon>ManageCustFcst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ManageCustFcst.aspx.designer.cs">
+      <DependentUpon>ManageCustFcst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\People.aspx.cs">
+      <DependentUpon>People.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\People.aspx.designer.cs">
+      <DependentUpon>People.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Rankings.aspx.cs">
+      <DependentUpon>Rankings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Rankings.aspx.designer.cs">
+      <DependentUpon>Rankings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\RankingView.aspx.cs">
+      <DependentUpon>RankingView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\RankingView.aspx.designer.cs">
+      <DependentUpon>RankingView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelDetail.ascx.cs">
+      <DependentUpon>ItemLocRelDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelDetail.ascx.designer.cs">
+      <DependentUpon>ItemLocRelDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelDetailAdjDemand.ascx.cs">
+      <DependentUpon>ItemLocRelDetailAdjDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\ItemRelationsControls\ItemLocRelDetailAdjDemand.ascx.designer.cs">
+      <DependentUpon>ItemLocRelDetailAdjDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Suppliers.aspx.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Suppliers.aspx.designer.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SupplierType.aspx.cs">
+      <DependentUpon>SupplierType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\SupplierType.aspx.designer.cs">
+      <DependentUpon>SupplierType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SupplyProcesses.aspx.cs">
+      <DependentUpon>SupplyProcesses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\SupplyProcesses.aspx.designer.cs">
+      <DependentUpon>SupplyProcesses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SupPurchGroup.aspx.cs">
+      <DependentUpon>SupPurchGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\SupPurchGroup.aspx.designer.cs">
+      <DependentUpon>SupPurchGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Targets.aspx.cs">
+      <DependentUpon>Targets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Targets.aspx.designer.cs">
+      <DependentUpon>Targets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\TransSuppliers.aspx.cs">
+      <DependentUpon>TransSuppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\TransSuppliers.aspx.designer.cs">
+      <DependentUpon>TransSuppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintUsers.aspx.cs">
+      <DependentUpon>MaintUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintUsers.aspx.designer.cs">
+      <DependentUpon>MaintUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Activity.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\CompareOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\CompareTypeEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\CompareUseEnum.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Dock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\DockTerm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Filter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\FilterCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\FilterConditionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\Item.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\JoinPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\PeriodRangeEnum.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Portal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\PortalDockCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Process.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\ResponseDock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Rule.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\RuleParam.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\RunStatusEnum.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Solution.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Table.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Task.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\Term.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\Loc.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\Supplier.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\SupplyProcStage.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\Plan.cs" />
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\Comment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\CommentCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\CommentStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\CommentType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\Forecast.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Fact\Supply.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\Dim\SupplyProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\ControlsUtil\DetailsViewRowUtils.cs" />
+    <Compile Include="AppCode\ControlsUtil\GridColumnsUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\RuleParamsControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\SoluitionConfigParams.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\Enums\DirectionEnum.cs" />
+    <Compile Include="AppCode\InterfaceLogic\DockControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\Enums\DockControlModeEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\BusinessLogic\TCLCleverBL\App\FilterTypeEnum.cs" />
+    <Compile Include="AppCode\InterfaceLogic\Enums\ProcessEnum.cs" />
+    <Compile Include="AppCode\InterfaceLogic\ResponseDockControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\ResponseTimePeriodDockControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\Enums\SolutionRunServiceCommands.cs" />
+    <Compile Include="AppCode\InterfaceLogic\Enums\MenusEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\InterfaceLogic\Utils.cs" />
+    <Compile Include="AppCode\StateManagers\ApplicationManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\StateManagers\SessionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CleverApp.Master.cs">
+      <DependentUpon>CleverApp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CleverApp.Master.designer.cs">
+      <DependentUpon>CleverApp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Help\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Help.master.cs">
+      <DependentUpon>Help.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\Help.master.designer.cs">
+      <DependentUpon>Help.master</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\Controls\Process.ascx.cs">
+      <DependentUpon>Process.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\Controls\Process.ascx.designer.cs">
+      <DependentUpon>Process.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\Controls\Task.ascx.cs">
+      <DependentUpon>Task.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\Controls\Task.ascx.designer.cs">
+      <DependentUpon>Task.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\Controls\Activity.ascx.cs">
+      <DependentUpon>Activity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\Controls\Activity.ascx.designer.cs">
+      <DependentUpon>Activity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\Controls\Solution.ascx.cs">
+      <DependentUpon>Solution.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\Controls\Solution.ascx.designer.cs">
+      <DependentUpon>Solution.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\Controls\RunDetails.ascx.cs">
+      <DependentUpon>RunDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\Controls\RunDetails.ascx.designer.cs">
+      <DependentUpon>RunDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\MPProcess.Master.cs">
+      <DependentUpon>MPProcess.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\MPProcess.Master.designer.cs">
+      <DependentUpon>MPProcess.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Process\Process.aspx.cs">
+      <DependentUpon>Process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\Process.aspx.designer.cs">
+      <DependentUpon>Process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsParams.ascx.cs">
+      <DependentUpon>DmdStatsParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\DmdStatsParams.ascx.designer.cs">
+      <DependentUpon>DmdStatsParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSelectParams.ascx.cs">
+      <DependentUpon>InvSelectParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\InvSelectParams.ascx.designer.cs">
+      <DependentUpon>InvSelectParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\UpdateForeignKeyParams.ascx.cs">
+      <DependentUpon>UpdateForeignKeyParams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RuleParamsControls\UpdateForeignKeyParams.ascx.designer.cs">
+      <DependentUpon>UpdateForeignKeyParams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\RunHistory.aspx.cs">
+      <DependentUpon>RunHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\RunHistory.aspx.designer.cs">
+      <DependentUpon>RunHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Process\Controls\SolutionTreeCopySource.ascx.cs">
+      <DependentUpon>SolutionTreeCopySource.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process\Controls\SolutionTreeCopySource.ascx.designer.cs">
+      <DependentUpon>SolutionTreeCopySource.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Setup.master.cs">
+      <DependentUpon>Setup.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Setup.master.designer.cs">
+      <DependentUpon>Setup.master</DependentUpon>
+    </Compile>
+    <Compile Include="TelerikTest.aspx.cs">
+      <DependentUpon>TelerikTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Analysis.aspx.cs">
+      <DependentUpon>Analysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Analysis.aspx.designer.cs">
+      <DependentUpon>Analysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Bus\BA002\cdBA002.ascx.cs">
+      <DependentUpon>cdBA002.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Bus\BA002\cdBA002.ascx.designer.cs">
+      <DependentUpon>cdBA002.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Bus\BA003\cdBA003.ascx.cs">
+      <DependentUpon>cdBA003.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Bus\BA003\cdBA003.ascx.designer.cs">
+      <DependentUpon>cdBA003.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Bus\portBus.aspx.cs">
+      <DependentUpon>portBus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Bus\portBus.aspx.designer.cs">
+      <DependentUpon>portBus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Dmd\DA001\ChartSeriesSource.ascx.cs">
+      <DependentUpon>ChartSeriesSource.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Dmd\DA001\ChartSeriesSource.ascx.designer.cs">
+      <DependentUpon>ChartSeriesSource.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Dmd\DA001\DmdFcstAgregateChart.ascx.cs">
+      <DependentUpon>DmdFcstAgregateChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Dmd\DA001\DmdFcstAgregateChart.ascx.designer.cs">
+      <DependentUpon>DmdFcstAgregateChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Dmd\FcstPatternView.aspx.cs">
+      <DependentUpon>FcstPatternView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Dmd\FcstPatternView.aspx.designer.cs">
+      <DependentUpon>FcstPatternView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Dmd\FcstView.aspx.cs">
+      <DependentUpon>FcstView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Dmd\FcstView.aspx.designer.cs">
+      <DependentUpon>FcstView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\DynamicPortal.aspx.cs">
+      <DependentUpon>DynamicPortal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\DynamicPortal.aspx.designer.cs">
+      <DependentUpon>DynamicPortal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FaMIS\portFaMIS.aspx.cs">
+      <DependentUpon>portFaMIS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FaMIS\portFaMIS.aspx.designer.cs">
+      <DependentUpon>portFaMIS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FilterManager.ascx.cs">
+      <DependentUpon>FilterManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FilterManager.ascx.designer.cs">
+      <DependentUpon>FilterManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FilterManagerTreeList.ascx.cs">
+      <DependentUpon>FilterManagerTreeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FilterManagerTreeList.ascx.designer.cs">
+      <DependentUpon>FilterManagerTreeList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\BoolCompareValue.ascx.cs">
+      <DependentUpon>BoolCompareValue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\BoolCompareValue.ascx.designer.cs">
+      <DependentUpon>BoolCompareValue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\factDmdStatsGrain.ascx.cs">
+      <DependentUpon>factDmdStatsGrain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\factDmdStatsGrain.ascx.designer.cs">
+      <DependentUpon>factDmdStatsGrain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\KeyCompareValueNew.ascx.cs">
+      <DependentUpon>KeyCompareValueNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\KeyCompareValueNew.ascx.designer.cs">
+      <DependentUpon>KeyCompareValueNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\DateCompareValue.ascx.cs">
+      <DependentUpon>DateCompareValue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\DateCompareValue.ascx.designer.cs">
+      <DependentUpon>DateCompareValue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\ItemSearch.ascx.cs">
+      <DependentUpon>ItemSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\ItemSearch.ascx.designer.cs">
+      <DependentUpon>ItemSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\KeyCompareValue.ascx.cs">
+      <DependentUpon>KeyCompareValue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\KeyCompareValue.ascx.designer.cs">
+      <DependentUpon>KeyCompareValue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\TextCompareValue.ascx.cs">
+      <DependentUpon>TextCompareValue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\TextCompareValue.ascx.designer.cs">
+      <DependentUpon>TextCompareValue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\TextValues.ascx.cs">
+      <DependentUpon>TextValues.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTermControls\TextValues.ascx.designer.cs">
+      <DependentUpon>TextValues.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTreeListPane.ascx.cs">
+      <DependentUpon>FilterTreeListPane.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTreeListPane.ascx.designer.cs">
+      <DependentUpon>FilterTreeListPane.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\ApplyStockStrat.aspx.cs">
+      <DependentUpon>ApplyStockStrat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\ApplyStockStrat.aspx.designer.cs">
+      <DependentUpon>ApplyStockStrat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\AssignSupplyStatus.aspx.cs">
+      <DependentUpon>AssignSupplyStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\AssignSupplyStatus.aspx.designer.cs">
+      <DependentUpon>AssignSupplyStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\SurplusAnalysis.aspx.cs">
+      <DependentUpon>SurplusAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\SurplusAnalysis.aspx.designer.cs">
+      <DependentUpon>SurplusAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\cvSurplus01.aspx.cs">
+      <DependentUpon>cvSurplus01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\cvSurplus01.aspx.designer.cs">
+      <DependentUpon>cvSurplus01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusLines.ascx.cs">
+      <DependentUpon>SurplusLines.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusLines.ascx.designer.cs">
+      <DependentUpon>SurplusLines.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusTransfer.ascx.cs">
+      <DependentUpon>SurplusTransfer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusTransfer.ascx.designer.cs">
+      <DependentUpon>SurplusTransfer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusTransferLine.ascx.cs">
+      <DependentUpon>SurplusTransferLine.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusTransferLine.ascx.designer.cs">
+      <DependentUpon>SurplusTransferLine.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusTransferLineAdd.ascx.cs">
+      <DependentUpon>SurplusTransferLineAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusTransferLineAdd.ascx.designer.cs">
+      <DependentUpon>SurplusTransferLineAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusTreeList.ascx.cs">
+      <DependentUpon>SurplusTreeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\Surplus\SurplusTreeList.ascx.designer.cs">
+      <DependentUpon>SurplusTreeList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV033.ascx.cs">
+      <DependentUpon>cdCIV033.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV033.ascx.designer.cs">
+      <DependentUpon>cdCIV033.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV034.ascx.cs">
+      <DependentUpon>cdCIV034.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV034.ascx.designer.cs">
+      <DependentUpon>cdCIV034.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV035.ascx.cs">
+      <DependentUpon>cdCIV035.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV035.ascx.designer.cs">
+      <DependentUpon>cdCIV035.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\RankingDocks\cdRanking002.ascx.cs">
+      <DependentUpon>cdRanking002.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\RankingDocks\cdRanking002.ascx.designer.cs">
+      <DependentUpon>cdRanking002.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV036.ascx.cs">
+      <DependentUpon>cdCIV036.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV036.ascx.designer.cs">
+      <DependentUpon>cdCIV036.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV037.ascx.cs">
+      <DependentUpon>cdCIV037.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV037.ascx.designer.cs">
+      <DependentUpon>cdCIV037.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV038.ascx.cs">
+      <DependentUpon>cdCIV038.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV038.ascx.designer.cs">
+      <DependentUpon>cdCIV038.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV039.ascx.cs">
+      <DependentUpon>cdCIV039.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV039.ascx.designer.cs">
+      <DependentUpon>cdCIV039.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV040.ascx.cs">
+      <DependentUpon>cdCIV040.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV040.ascx.designer.cs">
+      <DependentUpon>cdCIV040.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV041.ascx.cs">
+      <DependentUpon>cdCIV041.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV041.ascx.designer.cs">
+      <DependentUpon>cdCIV041.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV042.ascx.cs">
+      <DependentUpon>cdCIV042.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV042.ascx.designer.cs">
+      <DependentUpon>cdCIV042.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV043.ascx.cs">
+      <DependentUpon>cdCIV043.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV043.ascx.designer.cs">
+      <DependentUpon>cdCIV043.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV044.ascx.cs">
+      <DependentUpon>cdCIV044.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV044.ascx.designer.cs">
+      <DependentUpon>cdCIV044.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV051.ascx.cs">
+      <DependentUpon>cdCIV051.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV051.ascx.designer.cs">
+      <DependentUpon>cdCIV051.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV052.ascx.cs">
+      <DependentUpon>cdCIV052.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV052.ascx.designer.cs">
+      <DependentUpon>cdCIV052.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\ItemLocator.ascx.cs">
+      <DependentUpon>ItemLocator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\ItemLocator.ascx.designer.cs">
+      <DependentUpon>ItemLocator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\ItemLocatorByLocation.ascx.cs">
+      <DependentUpon>ItemLocatorByLocation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\ItemLocatorByLocation.ascx.designer.cs">
+      <DependentUpon>ItemLocatorByLocation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\ItemLocRelPopup.ascx.cs">
+      <DependentUpon>ItemLocRelPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\ItemLocRelPopup.ascx.designer.cs">
+      <DependentUpon>ItemLocRelPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\ItemLocRelPopupAdjDemand.ascx.cs">
+      <DependentUpon>ItemLocRelPopupAdjDemand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\ItemLocRelPopupAdjDemand.ascx.designer.cs">
+      <DependentUpon>ItemLocRelPopupAdjDemand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\ItemLocRelPopupKit.ascx.cs">
+      <DependentUpon>ItemLocRelPopupKit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\ItemLocRelPopupKit.ascx.designer.cs">
+      <DependentUpon>ItemLocRelPopupKit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\ItemRelPopup.ascx.cs">
+      <DependentUpon>ItemRelPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\ItemRelPopup.ascx.designer.cs">
+      <DependentUpon>ItemRelPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\ItemRelPopupKit.ascx.cs">
+      <DependentUpon>ItemRelPopupKit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\ItemRelPopupKit.ascx.designer.cs">
+      <DependentUpon>ItemRelPopupKit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\RunProcessPopup.ascx.cs">
+      <DependentUpon>RunProcessPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\RunProcessPopup.ascx.designer.cs">
+      <DependentUpon>RunProcessPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Sales\portSales.aspx.cs">
+      <DependentUpon>portSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Sales\portSales.aspx.designer.cs">
+      <DependentUpon>portSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Filter\FilterTreeList.ascx.cs">
+      <DependentUpon>FilterTreeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Filter\FilterTreeList.ascx.designer.cs">
+      <DependentUpon>FilterTreeList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Strat\SA004\cdStrat004.ascx.cs">
+      <DependentUpon>cdStrat004.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Strat\SA004\cdStrat004.ascx.designer.cs">
+      <DependentUpon>cdStrat004.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Summary\AssignRefValue.aspx.cs">
+      <DependentUpon>AssignRefValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Summary\AssignRefValue.aspx.designer.cs">
+      <DependentUpon>AssignRefValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Summary\SummaryDetail.aspx.cs">
+      <DependentUpon>SummaryDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Summary\SummaryDetail.aspx.designer.cs">
+      <DependentUpon>SummaryDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\AnalysisChart.ascx.cs">
+      <DependentUpon>AnalysisChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\AnalysisChart.ascx.designer.cs">
+      <DependentUpon>AnalysisChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TimePeriodDockContainer.ascx.cs">
+      <DependentUpon>TimePeriodDockContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TimePeriodDockContainer.ascx.designer.cs">
+      <DependentUpon>TimePeriodDockContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Dmd\portDmd.aspx.cs">
+      <DependentUpon>portDmd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Dmd\portDmd.aspx.designer.cs">
+      <DependentUpon>portDmd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inv\portInv.aspx.cs">
+      <DependentUpon>portInv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inv\portInv.aspx.designer.cs">
+      <DependentUpon>portInv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV002.ascx.cs">
+      <DependentUpon>cdCIV002.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV002.ascx.designer.cs">
+      <DependentUpon>cdCIV002.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV003.ascx.cs">
+      <DependentUpon>cdCIV003.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV003.ascx.designer.cs">
+      <DependentUpon>cdCIV003.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV004.ascx.cs">
+      <DependentUpon>cdCIV004.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV004.ascx.designer.cs">
+      <DependentUpon>cdCIV004.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV005.ascx.cs">
+      <DependentUpon>cdCIV005.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV005.ascx.designer.cs">
+      <DependentUpon>cdCIV005.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV006.ascx.cs">
+      <DependentUpon>cdCIV006.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV006.ascx.designer.cs">
+      <DependentUpon>cdCIV006.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV007.ascx.cs">
+      <DependentUpon>cdCIV007.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV007.ascx.designer.cs">
+      <DependentUpon>cdCIV007.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV008.ascx.cs">
+      <DependentUpon>cdCIV008.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV008.ascx.designer.cs">
+      <DependentUpon>cdCIV008.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV009.ascx.cs">
+      <DependentUpon>cdCIV009.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV009.ascx.designer.cs">
+      <DependentUpon>cdCIV009.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV010.ascx.cs">
+      <DependentUpon>cdCIV010.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV010.ascx.designer.cs">
+      <DependentUpon>cdCIV010.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV011.ascx.cs">
+      <DependentUpon>cdCIV011.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV011.ascx.designer.cs">
+      <DependentUpon>cdCIV011.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV012.ascx.cs">
+      <DependentUpon>cdCIV012.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV012.ascx.designer.cs">
+      <DependentUpon>cdCIV012.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV013.ascx.cs">
+      <DependentUpon>cdCIV013.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV013.ascx.designer.cs">
+      <DependentUpon>cdCIV013.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV014.ascx.cs">
+      <DependentUpon>cdCIV014.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV014.ascx.designer.cs">
+      <DependentUpon>cdCIV014.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV015.ascx.cs">
+      <DependentUpon>cdCIV015.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV015.ascx.designer.cs">
+      <DependentUpon>cdCIV015.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV016.ascx.cs">
+      <DependentUpon>cdCIV016.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV016.ascx.designer.cs">
+      <DependentUpon>cdCIV016.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV017.ascx.cs">
+      <DependentUpon>cdCIV017.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV017.ascx.designer.cs">
+      <DependentUpon>cdCIV017.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV018.ascx.cs">
+      <DependentUpon>cdCIV018.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV018.ascx.designer.cs">
+      <DependentUpon>cdCIV018.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV019.ascx.cs">
+      <DependentUpon>cdCIV019.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV019.ascx.designer.cs">
+      <DependentUpon>cdCIV019.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV020.ascx.cs">
+      <DependentUpon>cdCIV020.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV020.ascx.designer.cs">
+      <DependentUpon>cdCIV020.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV021.ascx.cs">
+      <DependentUpon>cdCIV021.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV021.ascx.designer.cs">
+      <DependentUpon>cdCIV021.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV022.ascx.cs">
+      <DependentUpon>cdCIV022.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV022.ascx.designer.cs">
+      <DependentUpon>cdCIV022.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV023.ascx.cs">
+      <DependentUpon>cdCIV023.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV023.ascx.designer.cs">
+      <DependentUpon>cdCIV023.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV024.ascx.cs">
+      <DependentUpon>cdCIV024.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV024.ascx.designer.cs">
+      <DependentUpon>cdCIV024.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV025.ascx.cs">
+      <DependentUpon>cdCIV025.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV025.ascx.designer.cs">
+      <DependentUpon>cdCIV025.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV026.ascx.cs">
+      <DependentUpon>cdCIV026.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV026.ascx.designer.cs">
+      <DependentUpon>cdCIV026.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV027.ascx.cs">
+      <DependentUpon>cdCIV027.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV027.ascx.designer.cs">
+      <DependentUpon>cdCIV027.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV028.ascx.cs">
+      <DependentUpon>cdCIV028.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV028.ascx.designer.cs">
+      <DependentUpon>cdCIV028.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV029.ascx.cs">
+      <DependentUpon>cdCIV029.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV029.ascx.designer.cs">
+      <DependentUpon>cdCIV029.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV030.ascx.cs">
+      <DependentUpon>cdCIV030.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV030.ascx.designer.cs">
+      <DependentUpon>cdCIV030.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV031.ascx.cs">
+      <DependentUpon>cdCIV031.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV031.ascx.designer.cs">
+      <DependentUpon>cdCIV031.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV032.ascx.cs">
+      <DependentUpon>cdCIV032.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV032.ascx.designer.cs">
+      <DependentUpon>cdCIV032.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\cdCIV050.ascx.cs">
+      <DependentUpon>cdCIV050.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\cdCIV050.ascx.designer.cs">
+      <DependentUpon>cdCIV050.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\ItemView.ascx.cs">
+      <DependentUpon>ItemView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\ItemView.ascx.designer.cs">
+      <DependentUpon>ItemView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\LeadTimeAdjustment.ascx.cs">
+      <DependentUpon>LeadTimeAdjustment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\LeadTimeAdjustment.ascx.designer.cs">
+      <DependentUpon>LeadTimeAdjustment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Item\portItem.aspx.cs">
+      <DependentUpon>portItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Item\portItem.aspx.designer.cs">
+      <DependentUpon>portItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Plan\Plan001\cvPlan001.aspx.cs">
+      <DependentUpon>cvPlan001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Plan\Plan001\cvPlan001.aspx.designer.cs">
+      <DependentUpon>cvPlan001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Plan\Plan002\cdPlan002p.ascx.cs">
+      <DependentUpon>cdPlan002p.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Plan\Plan002\cdPlan002p.ascx.designer.cs">
+      <DependentUpon>cdPlan002p.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Plan\PlanView.ascx.cs">
+      <DependentUpon>PlanView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Plan\PlanView.ascx.designer.cs">
+      <DependentUpon>PlanView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Plan\portPlan.aspx.cs">
+      <DependentUpon>portPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Plan\portPlan.aspx.designer.cs">
+      <DependentUpon>portPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\SelectiveDockDetailGrid.ascx.cs">
+      <DependentUpon>SelectiveDockDetailGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\SelectiveDockDetailGrid.ascx.designer.cs">
+      <DependentUpon>SelectiveDockDetailGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\SelectiveDockOverviewGrid.ascx.cs">
+      <DependentUpon>SelectiveDockOverviewGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\SelectiveDockOverviewGrid.ascx.designer.cs">
+      <DependentUpon>SelectiveDockOverviewGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Strat\portStrat.aspx.cs">
+      <DependentUpon>portStrat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Strat\portStrat.aspx.designer.cs">
+      <DependentUpon>portStrat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Summary\Summary.ascx.cs">
+      <DependentUpon>Summary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Summary\Summary.ascx.designer.cs">
+      <DependentUpon>Summary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Sup\portSup.aspx.cs">
+      <DependentUpon>portSup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Sup\portSup.aspx.designer.cs">
+      <DependentUpon>portSup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\user.master.cs">
+      <DependentUpon>user.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\user.master.designer.cs">
+      <DependentUpon>user.master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutGlobal.aspx" />
+    <Content Include="Admin\Admin.master" />
+    <None Include="App_Data\RadSpell\de-DE.tdf" />
+    <None Include="App_Data\RadSpell\en-US.tdf" />
+    <None Include="App_Data\RadSpell\fr-FR.tdf" />
+    <Content Include="Admin\etlTransformationSpec.aspx" />
+    <Content Include="Admin\HelpDocs.aspx" />
+    <Content Include="Admin\JoinPaths.aspx" />
+    <Content Include="Admin\MaintUserFilters.aspx" />
+    <Content Include="Admin\TermConfig.aspx" />
+    <Content Include="App_Themes\Default\Images\search.png" />
+    <Content Include="ConnectionLost.aspx" />
+    <Content Include="dlls\Telerik.Web.Device.Detection.dll" />
+    <Content Include="dlls\Telerik.Web.Device.Detection.xml" />
+    <Content Include="dlls\Telerik.Web.Spreadsheet.dll" />
+    <Content Include="dlls\Telerik.Windows.Documents.Core.dll" />
+    <Content Include="dlls\Telerik.Windows.Documents.Flow.dll" />
+    <Content Include="dlls\Telerik.Windows.Documents.Spreadsheet.dll" />
+    <Content Include="dlls\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll" />
+    <Content Include="dlls\Telerik.Windows.Maths.dll" />
+    <Content Include="dlls\Telerik.Windows.Zip.dll" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\tclogic-logo.png" />
+    <Content Include="MaintDataSources.aspx" />
+    <Content Include="App_Themes\Default\Images\copy.gif" />
+    <Content Include="App_Themes\Default\Images\down.png" />
+    <Content Include="App_Themes\Default\Images\locked.gif" />
+    <Content Include="App_Themes\Default\Images\process.gif" />
+    <Content Include="App_Themes\Default\Images\unlocked.gif" />
+    <Content Include="App_Themes\Default\Images\up.png" />
+    <Content Include="dlls\GotDotNet.ApplicationBlocks.Data.dll" />
+    <Content Include="dlls\itextsharp.dll" />
+    <Content Include="dlls\Melon.ApplicationBlocks.Data.dll" />
+    <Content Include="dlls\Telerik.Web.UI.Skins.dll" />
+    <Content Include="ERPIntegration\ERPIntegration.Master" />
+    <Content Include="Admin\OnlineUsers.aspx" />
+    <Content Include="App_Themes\Default\ImageButtons.skin" />
+    <Content Include="App_Themes\Default\Images\add.gif" />
+    <Content Include="App_Themes\Default\Images\combine.gif" />
+    <Content Include="App_Themes\Default\Images\delete.gif" />
+    <Content Include="App_Themes\Default\Images\next.gif" />
+    <Content Include="App_Themes\Default\Images\previous.gif" />
+    <Content Include="App_Themes\Default\Images\run.gif" />
+    <Content Include="App_Themes\Default\Images\upload.gif" />
+    <Content Include="ERPIntegration\P21\MakeOrder.ascx" />
+    <Content Include="ERPIntegration\SAP\SupPlans.aspx" />
+    <Content Include="ERPIntegration\P21\UploadPOs.aspx" />
+    <Content Include="ERPIntegration\P21\UploadTOs.aspx" />
+    <Content Include="ERPIntegration\SHIMS\MakeOrder.ascx" />
+    <Content Include="Events\Default.aspx" />
+    <Content Include="Events\DemandEvents.aspx" />
+    <Content Include="Events\StrategyEvents.aspx" />
+    <Content Include="Footer.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\icons\icon_pdf_411x380_green.gif" />
+    <Content Include="images\icons\icon_pdf_411x380_red.gif" />
+    <Content Include="images\icons\icon_pdf_22x20.png" />
+    <Content Include="images\tclogic-logo.gif" />
+    <Content Include="js\htmlToPDF.js" />
+    <Content Include="js\zxml.src.js" />
+    <Content Include="PDF\PdfFile.aspx" />
+    <Content Include="ProcessRunningInfo.aspx" />
+    <Content Include="Process\PrintSummary.aspx" />
+    <Content Include="Process\RuleParamsControls\CalcFcstFcstPatternParams.ascx" />
+    <Content Include="Process\RuleParamsControls\CalcFcstMovingAvgParams.ascx" />
+    <Content Include="Process\RuleParamsControls\CalcFcstMovingWeightedParams.ascx" />
+    <Content Include="Process\RuleParamsControls\CalcFcstSimpleAvgParams.ascx" />
+    <Content Include="Process\RuleParamsControls\ConvertSupLeadTimeToBusDays.ascx" />
+    <Content Include="Process\RuleParamsControls\DBMDeletefactInvPos.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdAdjustMaxDemand.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdCalcDemandCost.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdSetCustomerInvoiceToNewItem.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdSetInvoiceToNewLocation.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdStatsDmdGrowth.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdStatsResetSeasonal.ascx" />
+    <Content Include="Process\RuleParamsControls\ERPUploadForPOCreate_P21.ascx" />
+    <Content Include="Process\RuleParamsControls\ERPUploadForPOSuccess_P21.ascx" />
+    <Content Include="Process\RuleParamsControls\ERPUploadForTOCreate_P21.ascx" />
+    <Content Include="Process\RuleParamsControls\ERPUploadForTOSuccess_P21.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusInit.ascx" />
+    <Content Include="Process\RuleParamsControls\ItemsSetItemRel.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddAdjERPSecProcess.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddAdjERPReceipts.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddAdjERPSO.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddAdjOH.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddERPInvAllocQty.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddERPInvOnOrderQty.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanExpediteStatusNegEndOH.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanExpediteStatusLateCP.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdInitializeDmdType.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdKitToCompItem.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdRollupLocationDemandToSupplier.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdSSRollupItem.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdSSRollupItemLoc.ascx" />
+    <Content Include="Process\RuleParamsControls\FcstCalcClassifyLTFcstConsumedQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcService.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusAvailQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusByAvailLessUsage.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusDeNomUsingDmdStatsTotQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusNum.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusPercent.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyDmdStatsTotCOSQty.ascx" />
+    <Content Include="Process\RuleParamsControls\DBMAddMissingInventory.ascx" />
+    <Content Include="Process\RuleParamsControls\DBMArchiveRunHistory.ascx" />
+    <Content Include="Process\RuleParamsControls\DBMFactInvPosPropageValues.ascx" />
+    <Content Include="Process\RuleParamsControls\DBMFactStrategyPropageValues.ascx" />
+    <Content Include="Process\RuleParamsControls\DBMFactSupplyPropageValues.ascx" />
+    <Content Include="Process\RuleParamsControls\DBMSetCurrentDay.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdAdjustLowDemand.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdAdjustSpikes.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdInitializeAdjustments.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdInvoiceLineByType.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdProdKitDemand.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdRollupDemand.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdRollupFromDmdLines.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdRollupFromLines.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdRollupFromSupercededItems.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdRollupProcessDemand.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdRollupTransferDemand.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdStatsClassifySeasonal.ascx" />
+    <Content Include="Process\RuleParamsControls\DmdStatsClassifySpikes.ascx" />
+    <Content Include="Process\RuleParamsControls\FcstAddByFcstType.ascx" />
+    <Content Include="Process\RuleParamsControls\FcstInitializeQty.ascx" />
+    <Content Include="Process\RuleParamsControls\FcstMethodInitFcstPatternQty.ascx" />
+    <Content Include="Process\RuleParamsControls\FcstRollupFromFcstLines.ascx" />
+    <Content Include="Process\RuleParamsControls\FcstSetFcstConsumedQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvAssignStockStrategy.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcDmdQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcDmdQtyFromDmdLines.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcFcstQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcInvAvailQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcPlanInQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcPlanOHQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcPlanOHQtyFromPlan.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcPlanOutQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcRecQtyFromReceiptLines.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcStats.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSupLeadTime.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSpotTurns.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyFromDemand.ascx" />
+    <Content Include="Process\RuleParamsControls\InvIdentifyNewItems.ascx" />
+    <Content Include="Process\RuleParamsControls\InvPosCalcPlanOHQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvPosInitToPriorPeriod.ascx" />
+    <Content Include="Process\RuleParamsControls\InvSelectGetItemLocsByItem.ascx" />
+    <Content Include="Process\RuleParamsControls\InvSurplusRollupByFamily.ascx" />
+    <Content Include="Process\RuleParamsControls\InvSurplusRollupByItemPercentMethod.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanOrderFixedQtyInit.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanPropogatePlanParams.ascx" />
+    <Content Include="Process\RuleParamsControls\RankingToRankABC.ascx" />
+    <Content Include="Process\RuleParamsControls\ReconcileSurplus.ascx" />
+    <Content Include="Process\RuleParamsControls\InvCalcSurplusUsageQtyDmdStatsTotQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvDmdQtyRollupDemand.ascx" />
+    <Content Include="Process\RuleParamsControls\InvPosCurrOrderPointQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvSetCurrSSandCSQty.ascx" />
+    <Content Include="Process\RuleParamsControls\InvUpdateRecStatus.ascx" />
+    <Content Include="Process\RuleParamsControls\ItemLocRelAddMultipleItems.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanCalcPeriodEndingBalances.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanCalcTransferAvailQty.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanCalcTransferCriteriaQty.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanClassifyDeExpedite.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanClassifyExpedite.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanClassifyMRP.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanClassifyOrderStatus.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddERPPOReceipts.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddERPSecProcess.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddERPSOLines.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanDetailAddERPTOReceipts.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanForecastedActivity.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanInitialize.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanInitPlanDetail.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanInitPlanEndingBalances.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanPeriodEndingBalancesPO.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanPeriodEndingBalancesProd.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanPeriodEndingBalancesSecProc.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanPeriodEndingBalancesTO.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanRollupfactPlanDetail.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanSetLeadTime.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanSetOrderFixedQty.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanSetOrderLevelQty.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanSetOrderType.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanSetPlanDate.ascx" />
+    <Content Include="Process\RuleParamsControls\PlanUpdatePlanOnHandQty.ascx" />
+    <Content Include="Process\RuleParamsControls\RankingByPercentFactDemandTerms.ascx" />
+    <Content Include="Process\RuleParamsControls\RankingToRankPutAway.ascx" />
+    <Content Include="Process\RuleParamsControls\ReconcileInventoryDemandParams.ascx" />
+    <Content Include="Process\RuleParamsControls\ReconcileInventoryForecastParams.ascx" />
+    <Content Include="Process\RuleParamsControls\ReconcileInventoryInvPosParams.ascx" />
+    <Content Include="Process\RuleParamsControls\ReconcileInventoryPlanParams.ascx" />
+    <Content Include="Process\RuleParamsControls\ReconcileInventoryStrategyParams.ascx" />
+    <Content Include="Process\RuleParamsControls\ReconcileInventorySupplyParams.ascx" />
+    <Content Include="Process\RuleParamsControls\RunReport.ascx" />
+    <Content Include="Process\RuleParamsControls\RunSSISPackage.ascx" />
+    <Content Include="Process\RuleParamsControls\StratAssignCriticalyFK.ascx" />
+    <Content Include="Process\RuleParamsControls\StratAssignProbDensity.ascx" />
+    <Content Include="Process\RuleParamsControls\StratAssignTargetFK.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCalcEOQ.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCalcMinDayQtyForSupPurchGroupAndLoc.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCalcPlanDates.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCalcStratCost.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCalcStratFcstQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCalcStratOnHandQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCompareAvailQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCompareCurrQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCompareOnHandQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCreateStratDetailsFromEvents.ascx" />
+    <Content Include="Process\RuleParamsControls\StratCreateTargetsByLoc.ascx" />
+    <Content Include="Process\RuleParamsControls\StrategyDetailDelete.ascx" />
+    <Content Include="Process\RuleParamsControls\StrategyEventSetExpired.ascx" />
+    <Content Include="Process\RuleParamsControls\StratInitMinDayQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratInitMinMaxOptOrdQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratReconcileForecast.ascx" />
+    <Content Include="Process\RuleParamsControls\StratRollupStratDetails.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSelectParams.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetCycleStock.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetOrderPointQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetOrderPointQtyMinStratFcstQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetOrderQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetSafetyStockDays.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetSafetyStockSeasonalDays.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetsCPStratFcstQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetSSDaysByForecast.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetSSQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStdDevToFcstQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStrategyForecastToDemandStatsAverage.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStratLeadTimeDemandQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStratLeadTimeDemandQtyMinDayQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStratLIQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStratSSQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStratSSQtyConfigValue.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStratSSQtyMinStockQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStratSSQtyMinValue.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetStratStdDevQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratSetSupplyPkgQty.ascx" />
+    <Content Include="Process\RuleParamsControls\StratTargetOptimize.ascx" />
+    <Content Include="Process\RuleParamsControls\StratUpdateProbDenConfigFK.ascx" />
+    <Content Include="Process\RuleParamsControls\StratUpdateStratLeadTime.ascx" />
+    <Content Include="Process\RuleParamsControls\SupAddMissingTransfers.ascx" />
+    <Content Include="Process\RuleParamsControls\SupAddMissingTransferSuplItems.ascx" />
+    <Content Include="Process\RuleParamsControls\SupAssignSupplier.ascx" />
+    <Content Include="Process\RuleParamsControls\SupCalcAvgLeadTimeFromReceiptLines.ascx" />
+    <Content Include="Process\RuleParamsControls\SupCreateSupPlan.ascx" />
+    <Content Include="Process\RuleParamsControls\SupCreateSupStats.ascx" />
+    <Content Include="Process\RuleParamsControls\SupExportSupPlan.ascx" />
+    <Content Include="Process\RuleParamsControls\SupLeadTimeCompare.ascx" />
+    <Content Include="Process\RuleParamsControls\SupLeadTimeReceiptLines.ascx" />
+    <Content Include="Process\RuleParamsControls\SupOrderCreateFromPlanByLocPOGroup.ascx" />
+    <Content Include="Process\RuleParamsControls\SupOrderCreateFromPlanTransferOrder.ascx" />
+    <Content Include="Process\RuleParamsControls\SupPkgCalcDmdQtyDmdStats.ascx" />
+    <Content Include="Process\RuleParamsControls\SupPkgCalcNbrSupPkgQty.ascx" />
+    <Content Include="Process\RuleParamsControls\SupPkgCalcReset.ascx" />
+    <Content Include="Process\RuleParamsControls\SupPkgCalcThresholdQtyDays.ascx" />
+    <Content Include="Process\RuleParamsControls\SupPkgCalcUpdateOpt.ascx" />
+    <Content Include="Process\RuleParamsControls\SupPkgOptDiffQty.ascx" />
+    <Content Include="Process\RuleParamsControls\SupplySupPkgAdj.ascx" />
+    <Content Include="Process\RuleParamsControls\SupPurchGroupStatusByType.ascx" />
+    <Content Include="Process\RuleParamsControls\SupRankPurchasingSuppliers.ascx" />
+    <Content Include="Process\RuleParamsControls\SupRankTransferSuppliers.ascx" />
+    <Content Include="Process\RuleParamsControls\SupSetFactSupplySupPkgQty.ascx" />
+    <Content Include="Process\RuleParamsControls\SupSetLeadTime.ascx" />
+    <Content Include="Process\RuleParamsControls\SupSetSupLeadTimeFromSupStats.ascx" />
+    <Content Include="Process\RuleParamsControls\SupSetSupplyPackageQty.ascx" />
+    <Content Include="Process\RuleParamsControls\SupSetSupplyProcessQtyFromReceipts.ascx" />
+    <Content Include="Process\RuleParamsControls\SupSetSupplyProdOrderQtyFromReceipts.ascx" />
+    <Content Include="Process\RuleParamsControls\SupSetSupplyRecQtyFromReceipts.ascx" />
+    <Content Include="Process\RuleParamsControls\SupSetSupplyTransQtyFromReceipts.ascx" />
+    <Content Include="Process\RuleParamsControls\SurplusCalcAvailQty.ascx" />
+    <Content Include="Process\RuleParamsControls\SurplusTransferCreate.ascx" />
+    <Content Include="Process\RuleParamsControls\SurplusTransferNbrTransferTo.ascx" />
+    <Content Include="Process\RuleParamsControls\SurplusTransferNetCalcOrderQty.ascx" />
+    <Content Include="Process\RuleParamsControls\SurplusTransferReset.ascx" />
+    <Content Include="Process\RuleParamsControls\TransferOrderCreateFromSurplusTransfer.ascx" />
+    <Content Include="Process\RuleParamsControls\TransOrderCreateFromPlan.ascx" />
+    <Content Include="Process\RuleParamsControls\WriteOutputToFile.ascx" />
+    <Content Include="Process\RunResults.aspx" />
+    <Content Include="SelectDataSource.aspx" />
+    <Content Include="Setup\AssignSupPurchGroup.aspx" />
+    <Content Include="Setup\Criticality.aspx" />
+    <Content Include="Setup\FcstMethodParamsControls\FcstPatternParams.ascx" />
+    <Content Include="Setup\FcstPatterns.aspx" />
+    <Content Include="Setup\ItemRelations.aspx" />
+    <Content Include="Setup\ItemRelationsControls\ItemLocRelDetailFcstPattern.ascx" />
+    <Content Include="Setup\ItemRelationsControls\ItemLocRelDetailKit.ascx" />
+    <Content Include="Setup\ItemRelationsControls\ItemLocRelGrid.ascx" />
+    <Content Include="Setup\ItemRelationsControls\ItemLocRelTree.ascx" />
+    <Content Include="Setup\ItemRelationsControls\ItemRelDetail.ascx" />
+    <Content Include="Setup\ItemRelationsControls\ItemRelDetailFcstPattern.ascx" />
+    <Content Include="Setup\ItemRelationsControls\ItemRelDetailKit.ascx" />
+    <Content Include="Setup\ItemRelationsControls\ItemRelTree.ascx" />
+    <Content Include="Setup\ItemSuppliers.aspx" />
+    <Content Include="Setup\LifeCycleAnalysis.aspx" />
+    <Content Include="Setup\Locations.aspx" />
+    <Content Include="Setup\ManageCustFcst.aspx" />
+    <Content Include="Setup\People.aspx" />
+    <Content Include="Setup\RankingView.aspx" />
+    <Content Include="Setup\ItemRelationsControls\ItemLocRelDetail.ascx" />
+    <Content Include="Setup\ItemRelationsControls\ItemLocRelDetailAdjDemand.ascx" />
+    <Content Include="Setup\Suppliers.aspx" />
+    <Content Include="Setup\SupplierType.aspx" />
+    <Content Include="Setup\SupPurchGroup.aspx" />
+    <Content Include="TelerikTest.aspx" />
+    <Content Include="User\Dmd\DA001\ChartSeriesSource.ascx" />
+    <Content Include="User\Dmd\DA001\DmdFcstAgregateChart.ascx" />
+    <Content Include="User\Dmd\FcstPatternView.aspx" />
+    <Content Include="User\Dmd\FcstView.aspx" />
+    <Content Include="User\DynamicPortal.aspx" />
+    <Content Include="User\FaMIS\portFaMIS.aspx" />
+    <Content Include="User\FilterManager.ascx" />
+    <Content Include="User\FilterManagerTreeList.ascx" />
+    <Content Include="User\Filter\FilterTermControls\BoolCompareValue.ascx" />
+    <Content Include="User\Filter\FilterTermControls\factDmdStatsGrain.ascx" />
+    <Content Include="User\Filter\FilterTermControls\KeyCompareValueNew.ascx" />
+    <Content Include="User\Filter\FilterTermControls\DateCompareValue.ascx" />
+    <Content Include="User\Filter\FilterTermControls\ItemSearch.ascx" />
+    <Content Include="User\Filter\FilterTermControls\KeyCompareValue.ascx" />
+    <Content Include="User\Filter\FilterTermControls\TextCompareValue.ascx" />
+    <Content Include="User\Filter\FilterTermControls\TextValues.ascx" />
+    <Content Include="User\Filter\FilterTreeListPane.ascx" />
+    <Content Include="User\Inv\ApplyStockStrat.aspx" />
+    <Content Include="User\Inv\AssignSupplyStatus.aspx" />
+    <Content Include="User\Inv\SurplusAnalysis.aspx" />
+    <Content Include="User\Inv\Surplus\cvSurplus01.aspx" />
+    <Content Include="User\Inv\Surplus\SurplusLines.ascx" />
+    <Content Include="User\Inv\Surplus\SurplusTransfer.ascx" />
+    <Content Include="User\Inv\Surplus\SurplusTransferLine.ascx" />
+    <Content Include="User\Inv\Surplus\SurplusTransferLineAdd.ascx" />
+    <Content Include="User\Inv\Surplus\SurplusTreeList.ascx" />
+    <Content Include="User\Item\cdCIV033.ascx" />
+    <Content Include="User\Item\cdCIV034.ascx" />
+    <Content Include="User\Item\cdCIV035.ascx" />
+    <Content Include="Setup\RankingDocks\cdRanking002.ascx" />
+    <Content Include="User\Item\cdCIV036.ascx" />
+    <Content Include="User\Item\cdCIV037.ascx" />
+    <Content Include="User\Item\cdCIV038.ascx" />
+    <Content Include="User\Item\cdCIV039.ascx" />
+    <Content Include="User\Item\cdCIV040.ascx" />
+    <Content Include="User\Item\cdCIV041.ascx" />
+    <Content Include="User\Item\cdCIV042.ascx" />
+    <Content Include="User\Item\cdCIV043.ascx" />
+    <Content Include="User\Item\cdCIV044.ascx" />
+    <Content Include="User\Item\cdCIV051.ascx" />
+    <Content Include="User\Item\cdCIV052.ascx" />
+    <Content Include="User\Item\ItemLocator.ascx" />
+    <Content Include="User\Item\ItemLocatorByLocation.ascx" />
+    <Content Include="User\Item\ItemLocRelPopup.ascx" />
+    <Content Include="User\Item\ItemLocRelPopupAdjDemand.ascx" />
+    <Content Include="User\Item\ItemLocRelPopupKit.ascx" />
+    <Content Include="User\Item\ItemRelPopup.ascx" />
+    <Content Include="User\Item\ItemRelPopupKit.ascx" />
+    <Content Include="User\RunProcessPopup.ascx" />
+    <Content Include="User\Sales\portSales.aspx" />
+    <Content Include="User\Filter\FilterTreeList.ascx" />
+    <Content Include="User\Summary\AssignRefValue.aspx" />
+    <Content Include="User\AnalysisChart.ascx" />
+    <Content Include="User\user.master" />
+    <Content Include="App_Themes\Default\DetailsViewSkin.skin" />
+    <Content Include="Process\RuleParamsControls\CalcRankingParams.ascx" />
+    <Content Include="Process\RuleParamsControls\CalcStockingByTargetParams.ascx" />
+    <Content Include="Setup\Default.aspx" />
+    <Content Include="Setup\FcstMethodParamsControls\DoubleExpSmoothParams.ascx" />
+    <Content Include="Setup\FcstMethodParamsControls\MovingAvgParams.ascx" />
+    <Content Include="Setup\FcstMethodParamsControls\SimpleAvgParams.ascx" />
+    <Content Include="Setup\FcstMethodParamsControls\SingleExpSmoothParams.ascx" />
+    <Content Include="Setup\FcstMethods.aspx" />
+    <Content Include="Setup\ItemLocRelations.aspx" />
+    <Content Include="Setup\Rankings.aspx" />
+    <Content Include="Setup\Setup.master" />
+    <Content Include="Setup\SupplyProcesses.aspx" />
+    <Content Include="Setup\Targets.aspx" />
+    <Content Include="Setup\TransSuppliers.aspx" />
+    <Content Include="MaintUsers.aspx" />
+    <Content Include="images\activity.png" />
+    <Content Include="images\process.png" />
+    <Content Include="images\solution.png" />
+    <Content Include="images\task.png" />
+    <Content Include="Process\Controls\Process.ascx" />
+    <Content Include="Process\Controls\Task.ascx" />
+    <Content Include="Process\Controls\Activity.ascx" />
+    <Content Include="Process\Controls\Solution.ascx" />
+    <Content Include="Process\Controls\RunDetails.ascx" />
+    <Content Include="Process\MPProcess.Master" />
+    <Content Include="App_Themes\Default\Images\left.gif" />
+    <Content Include="App_Themes\Default\Images\right.gif" />
+    <Content Include="dlls\Telerik.Web.Design.dll" />
+    <Content Include="dlls\Telerik.Web.UI.dll" />
+    <Content Include="dlls\Telerik.Web.UI.XML" />
+    <Content Include="Help\Default.aspx" />
+    <Content Include="js\library.js" />
+    <Content Include="Process\Process.aspx" />
+    <Content Include="Process\RuleParamsControls\DmdStatsParams.ascx" />
+    <Content Include="Process\RuleParamsControls\InvSelectParams.ascx" />
+    <Content Include="Process\RuleParamsControls\UpdateForeignKeyParams.ascx" />
+    <Content Include="Process\RunHistory.aspx" />
+    <Content Include="Process\Controls\SolutionTreeCopySource.ascx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\MaintDocks.aspx" />
+    <Content Include="App_Data\RadEditorTools.xml" />
+    <Content Include="App_Themes\Default\styles.css" />
+    <Content Include="Help\Help.master" />
+    <Content Include="Help\About.aspx" />
+    <Content Include="images\clever-logo.gif" />
+    <Content Include="User\Analysis.aspx" />
+    <Content Include="User\Bus\BA002\cdBA002.ascx" />
+    <Content Include="User\Bus\BA003\cdBA003.ascx" />
+    <Content Include="User\Bus\portBus.aspx" />
+    <Content Include="User\Default.aspx" />
+    <Content Include="User\Strat\SA004\cdStrat004.ascx" />
+    <Content Include="User\Summary\SummaryDetail.aspx" />
+    <Content Include="User\TimePeriodDockContainer.ascx" />
+    <Content Include="User\Dmd\portDmd.aspx" />
+    <Content Include="User\Inv\portInv.aspx" />
+    <Content Include="User\Item\cdCIV003.ascx" />
+    <Content Include="User\Item\cdCIV022.ascx" />
+    <Content Include="User\Item\cdCIV023.ascx" />
+    <Content Include="User\Item\cdCIV024.ascx" />
+    <Content Include="User\Item\cdCIV025.ascx" />
+    <Content Include="User\Item\cdCIV026.ascx" />
+    <Content Include="User\Item\cdCIV027.ascx" />
+    <Content Include="User\Item\cdCIV028.ascx" />
+    <Content Include="User\Item\cdCIV029.ascx" />
+    <Content Include="User\Item\cdCIV030.ascx" />
+    <Content Include="User\Item\cdCIV031.ascx" />
+    <Content Include="User\Item\cdCIV032.ascx" />
+    <Content Include="User\Item\cdCIV050.ascx" />
+    <Content Include="User\Item\ItemView.ascx" />
+    <Content Include="User\Item\LeadTimeAdjustment.ascx" />
+    <Content Include="User\Plan\Plan001\cvPlan001.aspx" />
+    <Content Include="User\Plan\Plan002\cdPlan002p.ascx" />
+    <Content Include="User\Plan\PlanView.ascx" />
+    <Content Include="User\Plan\portPlan.aspx" />
+    <Content Include="User\SelectiveDockDetailGrid.ascx" />
+    <Content Include="User\SelectiveDockOverviewGrid.ascx" />
+    <Content Include="User\Strat\portStrat.aspx" />
+    <Content Include="User\Summary\Summary.ascx" />
+    <Content Include="User\Sup\portSup.aspx" />
+    <Content Include="CleverApp.Master" />
+    <Content Include="Login.aspx" />
+    <Content Include="User\Item\cdCIV002.ascx" />
+    <Content Include="User\Item\cdCIV004.ascx" />
+    <Content Include="User\Item\cdCIV005.ascx" />
+    <Content Include="User\Item\cdCIV006.ascx" />
+    <Content Include="User\Item\cdCIV007.ascx" />
+    <Content Include="User\Item\cdCIV008.ascx" />
+    <Content Include="User\Item\cdCIV009.ascx" />
+    <Content Include="User\Item\cdCIV010.ascx" />
+    <Content Include="User\Item\cdCIV011.ascx" />
+    <Content Include="User\Item\cdCIV012.ascx" />
+    <Content Include="User\Item\cdCIV013.ascx" />
+    <Content Include="User\Item\cdCIV014.ascx" />
+    <Content Include="User\Item\cdCIV015.ascx" />
+    <Content Include="User\Item\cdCIV016.ascx" />
+    <Content Include="User\Item\cdCIV017.ascx" />
+    <Content Include="User\Item\cdCIV018.ascx" />
+    <Content Include="User\Item\cdCIV019.ascx" />
+    <Content Include="User\Item\cdCIV020.ascx" />
+    <Content Include="User\Item\cdCIV021.ascx" />
+    <Content Include="User\Item\portItem.aspx" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="daabProvider.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Events\Events.Master" />
+    <Content Include="GlobalAdmin.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CleverDAO\CleverDAO.csproj">
+      <Project>{3531CEB6-3D0C-4EBD-ADD9-775798D8EC64}</Project>
+      <Name>CleverDAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppCode\BusinessLogic\ERPIntegrationBL\SHIMS\" />
+    <Folder Include="bin\" />
+    <Folder Include="HelpDocs\" />
+    <Folder Include="User\Bus\BA001\" />
+    <Folder Include="User\Bus\BA004\" />
+    <Folder Include="User\Chart\" />
+    <Folder Include="User\Sup\SA002\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3919</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/CleverUI</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
