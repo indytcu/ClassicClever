@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/CleverApp.Master" AutoEventWireup="true"
+    CodeBehind="Admin.master.cs" Inherits="CleverUI.Admin.Admin" %>
+
+<asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server"/>
+
+<asp:Content ID="cBody" ContentPlaceHolderID="ContentPlaceHolderApp" runat="server">
+    <telerik:RadMenu ID="menuAdmin" runat="server" Skin="Default" Width="100%" style="z-index:999;" >
+        <Items>
+            <telerik:RadMenuItem Text="Application">
+                <Items>
+                    <telerik:RadMenuItem Text="User Filters" NavigateUrl="~/Admin/MaintUserFilters.aspx" />
+                    <telerik:RadMenuItem Text="Portals" NavigateUrl="~/Admin/MaintDocks.aspx" />
+                    <telerik:RadMenuItem Text="Join Paths" NavigateUrl="~/Admin/JoinPaths.aspx" />
+                    <telerik:RadMenuItem Text="Terms" NavigateUrl="~/Admin/TermConfig.aspx" />
+                </Items>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem IsSeparator="true" />
+            <telerik:RadMenuItem Text="Help Documents" NavigateUrl="~/Admin/HelpDocs.aspx">
+                <Items>
+                  
+                </Items>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem IsSeparator="true" />
+            <telerik:RadMenuItem Text="Online Users" NavigateUrl="OnlineUsers.aspx">
+                <Items>
+                   
+                </Items>
+            </telerik:RadMenuItem>
+                        <telerik:RadMenuItem IsSeparator="true" />
+            <telerik:RadMenuItem Text="Data Source Access">
+                <Items>
+                  <telerik:RadMenuItem Text="Data Sources" NavigateUrl="~/MaintDataSources.aspx?app=1" />
+                  <telerik:RadMenuItem Text="Users" NavigateUrl="~/MaintUsers.aspx?app=1" />
+                </Items>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem IsSeparator="true" />
+              <telerik:RadMenuItem IsSeparator="true" />
+            <telerik:RadMenuItem Text="Documentation" NavigateUrl="etlTransformationSpec.aspx">
+                <Items>
+                   
+                </Items>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem IsSeparator="true" />
+            <telerik:RadMenuItem Text="About Clever">
+                <Items>
+                   
+                </Items>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem IsSeparator="true" />
+            <telerik:RadMenuItem CssClass="a_breadcrumb" OuterCssClass="li_breadcrumb" Value="Breadcrumbs"/>
+        </Items>
+        
+    </telerik:RadMenu>
+    <div class="clear"></div>
+    <asp:ContentPlaceHolder ID="cphAdminPage" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
