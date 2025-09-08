@@ -1,0 +1,351 @@
+﻿ 
+body{font-family:Arial, Sans-serif;font-size: 12px; margin:0px ! important;}
+
+/*** General Styles **********************************************************************************/
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+.hidden {display:none;}
+.validator, .required, .error{color:Red;}
+.message{color:Green;}
+.note{font-size:10px;}
+.right_txt{text-align:right;}
+.colored_txt{color:#0000ff ! important;border-color:#6788be ! important;font-weight:bold ! important;}/*color: #22B14C*/
+.btn_midle{vertical-align:middle;}
+a, a:visited{color: #009BF2;}
+a:hover, a.active{color: #656565;}
+a {cursor:pointer ! important;}
+a[disabled="disabled"] {cursor:default ! important;}
+h3.title {color:#009BF2;font-size:16px;font-weight:normal; margin:0;padding:0;}
+.title{color:#656565;}
+.i_title{font-style:italic;}
+.pad3{display:block;margin:3px 0 1px 0;}
+ .RadMenu .test1{z-index:10000 ! important;}
+/*Details grid styles*/
+.dtl_tbl{color:#333333;}
+.dtl_row_header{font-weight:bold;color:#fff;background-color:Gray;}
+.dtl_row_header td{padding-left:4px;}
+.dtl_row{background-color:#DFDFDF;}
+.dtl_row td {padding-left:4px;padding-right:4px;}
+.dtl_header {background-color:#CCCCCC;padding-left:7px ! important;}
+
+/*** Telerik controls ***/
+.RadComboBox_Web20 .rcbDisabled .rcbInputCell .rcbInput,
+.RadComboBoxDropDown_Web20 .rcbDisabled
+{
+    background-color: White;
+    color: #fff;
+}
+
+.chart_dock .rdMiddle .rdCenter .rdContent{overflow:hidden ! important;}
+.test{position:relative;}
+.RadSplitter_Web20{width:100% ! important;}
+.RadDock .rdMiddle .rdCenter .rdContent{ padding-top:5px ! important}
+.rspCollapseBarExpand,         
+.rspCollapseBarExpandOver {         
+    background: url(Images/right.gif) no-repeat 0 0 !important;    
+    position:absolute;               
+    width:20px!important;
+    margin-left: -8px !important; 
+     z-index:2 !important;
+}                                
+.rspCollapseBarCollapse,         
+.rspCollapseBarCollapseOver {         
+    background: url(Images/left.gif) no-repeat 0 0 !important;              
+    position:absolute;   
+    width:20px!important;                   
+    margin-left: -8px !important; 
+    z-index:2 !important;
+} 
+.RadMenu {z-index:2000}                  
+.reToolbarWrapper{height:27px !important;}
+.reContentCell{height: auto !important;}
+.ajax_panel .RadAjax .raDiv{position: absolute !important;} /*to center the loading icon in the filter manager popup*/
+
+/*Menu Breadcrumb*/
+div.RadMenu .li_breadcrumb{float: right;}
+div.RadMenu .a_breadcrumb{background:none ! important;font-style:italic! important; cursor:text ! important;}
+
+/*** Styles in User **********************************************************************************/
+.header{padding:0 0 3px 0;height:30px;}
+.header .logo{float:left;padding-right:5px;}
+.header_right {width:555px;float:right;}
+.header_right .menu-left{padding-right:10px;}
+.header_right .menu{ float:left;padding-top:7px;}
+.header_right .menu span{ padding:2px;}
+.header_right .login_status{ float:right;padding-top:7px;}
+.header_right .filter{float:left; padding-right:10px;}
+.header .portal_menu{float:left;}
+.header .portal_menu .rtsIn {padding:0!important;}
+.header .portal_menu .rtsTxt {padding-left:2px!important;padding-right:2px!important;}
+.header .portal_menu {margin-top:2px! important;}
+.header .portal_menu .rmText{padding-left:9px! important; padding-right:9px! important;}
+.header .portal_menu .rmGroup{background-image:none! important;}
+
+.exporting
+{
+    font-size:18px;
+    font-weight:bold;
+    padding-top:50px;
+}
+.curr_date{padding-top:7px;float:left;}
+/*.curr_date{padding-top:7px;padding-left:10px;}*/
+
+
+.item_tabs .rtsIn {padding:0!important;}
+.item_tabs .rtsTxt {padding-left:2px!important;padding-right:1px!important;}
+
+.body{margin: 7px 7px 7px 7px;}
+.tbl_body .td_right{ width:359px; padding-left:10px;}
+.footer{ text-align:center;padding:10px 0 5px 0;}
+.zone{width:100% ! important;padding:0px ! important;}
+.item_details{ margin:3px 0;}
+.item_details td {padding-left:5px;font-style:italic;}
+.item_details td .item{color:#4e7Abe;font-weight:bold;}
+.item_filter td{padding-right:6px;}
+.groupby{ width:265px;padding-right:10px;}
+.groupby table td{padding:0 4px 4px 0}
+.lst_group_by .rlbGroup{border:none ! important;}
+.lst_group_by .rlbGroup .rlbItem{padding-left:1px ! important;}
+.lst_group_by .rlbGroup .rlbActive {
+	background: none !important;
+	border: 1px solid white !important;
+	background-color:White! important;
+	padding-left:0px ! important;
+}
+.lst_group_by .rlbGroup .rlbHovered {background-color:White! important;}
+
+.tbl_group_by1{margin:8px 0;}
+.tbl_group_by1 td{padding-right:6px;}
+.cb_filter{width:100px ! important;padding-top:3px;}
+.a_item{text-decoration:underline;cursor:pointer;}
+.RadComboBoxDropDown_Telerik .rcbFooter{background-position:0px -120px ! important;}
+.btn_filter{ margin-top:2px; width:53px; vertical-align:middle;}
+.comment-form{padding:10px 15px 10px 15px;width:100%;}
+.pad5{padding:5px;}
+.zoneOverflow {position:relative; overflow: auto;}
+.tbl_filter_popup{padding:8px;}
+.tbl_filter_popup td{vertical-align:top;}
+.tbl_filter_popup .left_col{padding-right:20px;width:260px;}
+.tbl_filter_popup .left_col .buttons{ padding-bottom:5px;}
+.tbl_filter_popup .left_col .pad_bottom{padding-bottom:5px;}
+.btn_items_count{vertical-align:middle;margin-left:20px;}
+.time_period{padding:3px 0;}
+
+
+.fcst_analysis_grid .rgEditRow td input{text-align:right;}
+.fcst_analysis_grid .rgEditRow td.dll_fcst_adj input{text-align:left;}
+
+.plan_grid .rgRow TD
+{
+    padding-bottom:0px ! important;
+    padding-top:0px ! important;
+}
+
+.next{background-image:url("images/next.gif") ! important;}
+.prev{background-image:url("images/previous.gif") ! important;}
+.locked{background-image:url("images/locked.gif") ! important;}
+.unlocked{background-image:url("images/unlocked.gif") ! important;}
+.process{background-image:url("images/process.gif") ! important;}
+
+/*** Styles in Admin ***/
+.portal_filter{ padding:3px 0 3px 3px;}
+.term_form{ margin:5px;}
+
+/** Styles in Processes ***/
+.cb_solutions{padding:2px;}
+.act_btn{padding-right:10px; }
+.save_btn{padding: 3px 0 0 3px;}
+.act_toolbar{background-color:#eeeeee ! important;margin:0px 0 0 2px;padding:2px; border:#828282 1px solid;}
+.cb_solutions .RadComboBox_Web20 td.rcbInputCellLeft {  background-position:0px -110px!important;} 
+.cb_solutions .RadComboBox_Web20 td.rcbInputCellLeft input{ color:#0f3789 ! important;} 
+.cb_solutions .RadComboBox_Web20 td.rcbArrowCellRight{width:18px ! important;background-position:0px -88px!important;}
+.tbl_rule_params td{padding-right:10px;}
+.read_param{color:Blue;}
+.dtls_left{float:left;width:450px;}
+.dtls_left table td{padding:2px;}
+
+.rcb_web20 td.rcbInputCellLeft {  background-position:0px -110px!important;} 
+.rcb_web20 td.rcbInputCellLeft input{ color:#0f3789 ! important;} 
+.rcb_web20 td.rcbInputCellLeft .rcbEmptyMessage{color:#666 ! important;}
+.rcb_web20 td.rcbArrowCellRight{width:18px ! important;background-position:0px -88px!important;}
+
+.legend_run_status td{font-size:10px;padding-right:5px;}
+.legend_run_status th{text-align:left;font-weight:normal;}
+.legend_run_status div.excluded,
+.legend_run_status div.waiting,
+.legend_run_status div.running,
+.legend_run_status div.success,
+.legend_run_status div.failed,
+.legend_run_status div.completed_error,
+.legend_run_status div.cancelled {height: 8px; width: 8px; border:solid 1px #ccc;}
+.legend_run_status div.status {float:right;padding-left:1px; color:#000;}
+
+.legend_run_status .excluded{ background-color: #656565;}
+.legend_run_status .waiting{ background-color: #000;}
+.legend_run_status .running{background-color: #0000ff;}
+.legend_run_status .success{background-color: #22B14C;}
+.legend_run_status .failed{background-color: #ff0000;}
+.legend_run_status .completed_error{background-color: #b97A57;}
+.legend_run_status .cancelled{background-color: #ff8000;}
+
+.excluded{color:#656565;}
+.waiting{color: #000;}
+.running{color: #0000ff;}
+.success{color: #22B14C;}
+.failed{color: #ff0000;}
+.completed_error{color: #b97A57;}
+.cancelled{color: #ff8000;}
+.rbl_select_inv td{width:80px;}
+.run_history_filter{padding: 5px 0px 5px 2px;}
+.run_history_filter .btn_search{vertical-align:middle;}
+.dock_panel{min-height:100px;}
+/*** Setup styles */
+
+/*** Stypes in ERP Integration***/
+.btnUploadOrders{background-image:url('images/upload.gif');height:18px;width:18px;cursor:pointer;border:0px;padding:0;margin:0 3px 0 0;vertical-align:middle;}
+.btnCombineLines{background-image:url('images/combine.gif');height:18px;width:18px;cursor:pointer;border:0px;padding:0;margin:0 3px 0 0;vertical-align:middle;}
+
+
+
+/*** Style buttons ***/
+.btn-download-pdf-22x20
+{
+    background-color:transparent !important;
+    background-repeat:no-repeat !important;
+    background-image: url("/images/icons/icon_pdf_22x20.png") !important;
+    background-position:center 0px;
+}
+.btn-download-pdf-22x20:hover
+{
+    background-image: url("/images/icons/icon_pdf_22x20.png") 0 -20px !important;
+    background-position: center -20px !important;
+}
+/*** /Style buttons ***/
+
+.login_box
+{
+   margin:100px auto;
+   text-align:center;
+   width: 320px;
+   border: 1 solid red;
+}
+.source_box
+{
+   margin:100px auto;
+   text-align:center;
+   width: 420px;
+   border: 1 solid red;
+}
+
+.login_logo
+{
+    margin-left:5px;
+}
+.login_cntrl
+{
+   text-align:left;
+}
+.login_form
+{
+     margin-top:15px;
+     
+}
+.login_form tr td
+{
+    padding-left:5px;
+    padding-bottom:3px;
+}
+.use_prohibit
+{
+    color:Red;
+    font-size:16px;
+    font-weight:bold;
+    padding-top: 20px; 
+    text-align:center;
+}
+.input_comment
+{
+      color:#666;
+      font-style:italic;
+}
+.tableBlackWhite
+{
+    border: 1px solid Black;
+}
+.tableBlackWhite thead
+{
+    background-color: Black; 
+    color: White; 
+    padding: 5px;
+}
+.tableBlackWhite td
+{
+   padding: 8px;
+   border: 1px solid Black;
+}
+
+.session_exp_text
+{
+    margin:100px auto;
+    text-align:center;
+    font-size:20px;
+}
+
+.session_exp_logo
+{
+   margin:0 0 0 -400px;
+    }
+    
+    /* Rad Dock Style Fix */
+    
+    .rdTop .rdLeft, .rdTop .rdRight, .rdMiddle .rdLeft, .rdMiddle .rdRight, .rdBottom
+        {
+            display: none;
+        }
+         
+     .RadDock.rdTitleBar em
+    {
+        padding: 0px !important;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+      
+.displayController
+{
+ padding-right:20px;   
+}
+
+.chart svg, .noChartData, .noChartData-wide
+{
+    border-radius:10px 10px;
+    border: #828282 solid 1px;
+    background-color: #ECECEC;   
+}
+
+.noChartData
+{
+    width:330px;
+    height:300px;
+}
+
+.noChartData div
+{
+ height:250px;width:280px;background-color:White;margin-left:25px;margin-top:25px;border:#CCCCCC solid 1px;text-align:center;line-height:250px;   
+}
+
+.noChartData-wide div
+{
+ height:250px;width:630px;background-color:White;margin-left:25px;margin-top:25px;border:#CCCCCC solid 1px;text-align:center;line-height:250px;   
+}
+
+.noChartData-wide
+{
+    width:680px;
+    height:300px;
+}
+
+.noChartData div span, .noChartData-wide div span
+{
+    color:Red;font-size:16px;
+}
