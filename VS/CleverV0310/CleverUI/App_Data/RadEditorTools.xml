@@ -1,0 +1,17 @@
+﻿<root>
+  <tools name="MainToolbar" enabled="true">
+    <tool name="AjaxSpellCheck" />
+    <tool name="Print" />
+    <tool name="FindAndReplace" />
+    <tool separator="true"/>
+    <tool name="Cut" />
+    <tool name="Copy" />
+    <tool name="Paste" />
+    <tool name="PasteFromWord" />
+    <tool name="PastePlainText" />
+    <tool name="PasteAsHtml"  />
+    <tool separator="true"/>
+    <tool name="Undo" />
+    <tool name="Redo" />
+  </tools>
+</root>
